@@ -331,7 +331,7 @@ aside li {
 /* End of 1.1. Header section */
 /* 1.2. Hero section */
 .Hero {
-    background: url('../images/bg/bg-hero.jpg'), #F7F8FF;
+    background: url('../images/bg/2.png'), #F7F8FF;
     background-size: 100% 67%;
     background-repeat: no-repeat;
     background-position: top center;
@@ -356,7 +356,7 @@ aside li {
 }
 
 .Hero h4 {
-    color: #FFCD06;
+    color: #00b3ff;
     margin-bottom: 16px;
 }
 
@@ -407,7 +407,7 @@ aside li {
 .Hero .row .flex-column a {
     padding: 4px 16px;
     border-radius: 20px;
-    background-color: #FFCD06;
+    background-color: #00b3ff;
     color: #3E3F41;
 }
 
@@ -452,7 +452,7 @@ aside li {
 }
 
 .Hero .row .col-md-4::after {
-    background: #ffcd06e6;
+    background: #00b3ff;
 }
 
 .Hero .row .col-md-4:hover::after {
@@ -468,7 +468,7 @@ aside li {
 
 .Hero .row .col-md-4:hover a {
     background-color: #3E3F41;
-    color: #FFCD06;
+    color: #00b3ff;
 }
 
 .Hero .row .col-md-4 i {
@@ -630,7 +630,8 @@ aside li {
     position: absolute;
     top: 25%;
     left: 25%;
-    background-color: #FFCD06;
+    background-color: #00b3ff !important;
+    color: #000;
     border-radius: 20px;
     z-index: 9;
     width: 150px;
@@ -954,7 +955,7 @@ aside li {
 
 .We-Do .d-flex figure {
     display: inline-block;
-    background-color: #FFCD06;
+    background-color: #00b3ff;
     padding: 24px;
     border-radius: 50%;
     box-shadow: 0px 25px 40px 0px #0000001A;
@@ -993,7 +994,7 @@ aside li {
 }
 
 .Services_We-Do .d-flex:hover figure {
-    background-color: #FFCD06;
+    background-color: #00b3ff;
 }
 
 @media (max-width: 991px) {
@@ -1068,7 +1069,7 @@ aside li {
 }
 
 .Logistics .col-lg-6 h4 {
-    color: #FFCD06;
+    color: #00b3ff;
 }
 
 .Logistics .col-lg-6 h2,
@@ -1347,7 +1348,7 @@ aside li {
 }
 
 .Achievements h4 {
-    color: #FFCD06;
+    color: #00b3ff;
     text-align: center;
 }
 
@@ -1426,7 +1427,7 @@ aside li {
 /* 1.8. Quote section */
 .Quote {
     padding: 100px 0px 0px;
-    background: linear-gradient(to bottom, #FFCD06 75%, #FFF 25%);
+    background: linear-gradient(to bottom, #00b3ff 75%, #FFF 25%);
 }
 
 .Quote .col-lg-7 figure {
@@ -1604,7 +1605,7 @@ aside li {
 
 @media (max-width: 480px) {
     .Quote {
-        background: linear-gradient(to bottom, #FFCD06 90%, #FFF 10%);
+        background: linear-gradient(to bottom, #00b3ff 90%, #FFF 10%);
         padding: 50px 0px 0px;
     }
 
@@ -1924,7 +1925,7 @@ aside li {
 }
 
 .Testimonials .mySlides i {
-    color: #FFCD06;
+    color: #00b3ff;
     font-size: 20px;
     margin: 0px 6px;
 }
@@ -2297,7 +2298,7 @@ aside li {
 }
 
 .Guide .col-md-6 h4 {
-    color: #FFCD06;
+    color: #00b3ff;
 }
 
 .Guide .col-md-6 h2 {
@@ -2784,7 +2785,7 @@ aside li {
 }
 
 .News .d-flex div a:hover {
-    color: #FFCD06;
+    color: #00b3ff;
 }
 
 .News .d-flex div a i {
@@ -2797,7 +2798,7 @@ aside li {
 }
 
 .News .d-flex div a:hover i {
-    background-color: #FFCD06;
+    background-color: #00b3ff;
 }
 
 @media (max-width: 991px) {
@@ -2882,7 +2883,7 @@ aside li {
 /* End of 1.14. News section */
 
 
-/* 1.15. Subscribe section */
+/* 1.15. pascribe section */
 .Subscribe {
     padding-top: 150px;
     background: linear-gradient(to bottom, transparent 80%, #1141BE 80%);
@@ -2891,7 +2892,7 @@ aside li {
 }
 
 .Subscribe .position-relative {
-    background: #FFCD06;
+    background: #00b3ff;
     border-radius: 40px;
     padding: 30px;
 }
@@ -2936,7 +2937,7 @@ aside li {
 }
 
 .Subscribe form button:hover {
-    color: #FFCD06;
+    color: #00b3ff;
 }
 
 @media (max-width: 1400px) {
@@ -3060,8 +3061,8 @@ footer a:hover h4,
 footer a:hover p,
 footer a:hover i,
 footer a:hover {
-    color: #FFCD06;
-    border-color: #FFCD06;
+    color: #00b3ff;
+    border-color: #00b3ff;
 }
 
 footer .container i {
@@ -3109,7 +3110,7 @@ footer ul li {
 }
 
 footer .copyright {
-    background: #FFCD06;
+    background: #00b3ff;
 }
 
 footer .copyright p {
@@ -3247,7 +3248,7 @@ footer .copyright p {
 
 /* 2.1. SubPage-Hero section */
 .SubPage-Hero {
-    background: url("../images/bg/bg-hero2.jpg");
+    background: url("../images/bg/cargo.png");
     background-position: 80% 100%;
     position: relative;
     padding: 100px 0px;
@@ -3719,8 +3720,8 @@ footer .copyright p {
 }
 
 .Contact-Us a.align-items-center:hover {
-    color: #FFCD06;
-    border-color: #FFCD06;
+    color: #00b3ff;
+    border-color: #00b3ff;
     background-color: transparent;
 }
 
@@ -3750,8 +3751,8 @@ footer .copyright p {
 }
 
 .Contact-Us .justify-content-between a:hover {
-    color: #FFCD06;
-    border-color: #FFCD06;
+    color: #00b3ff;
+    border-color: #00b3ff;
 }
 
 .Contact-Us input::placeholder,
@@ -3959,7 +3960,7 @@ footer .copyright p {
 }
 
 .Feedback i {
-    color: #FFCD06;
+    color: #00b3ff;
     font-size: 14px;
 }
 
@@ -4272,7 +4273,7 @@ footer .copyright p {
 }
 
 .Page-not-found .footer a:hover {
-    color: #FFCD06;
+    color: #00b3ff;
 }
 
 @media (max-width: 768px) {

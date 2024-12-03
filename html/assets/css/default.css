@@ -252,14 +252,14 @@ a {
 }
 
 .hover1:hover {
-    background-color: #FFCD06 !important;
+    background-color: #00b3ff !important;
     color: #3E3F41 !important;
 }
 
 .hover2 {
     display: inline-block;
-    color: #3E3F41;
-    background-color: #FFCD06;
+    color: #000;
+    background-color: #00b3ff;
     padding: 15px 30px;
     border-radius: 8px;
 }
