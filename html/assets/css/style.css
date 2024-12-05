@@ -1059,7 +1059,7 @@ aside li {
 
 /* 1.5. Logistics section */
 .Logistics {
-    background-image: url("../images/bg/bg-what.jpg");
+    background-image: url("../images/bg/video.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2264,7 +2264,7 @@ aside li {
 
 /* 1.12. Guide section */
 .Guide {
-    background: url("../images/bg/bg-Guide.jpg");
+    background: url("../images/bg/vediobg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -2800,6 +2800,129 @@ aside li {
 .News .d-flex div a:hover i {
     background-color: #00b3ff;
 }
+
+
+/* FB posts */
+/* Follow Us Section */
+
+.follow-us {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    font-size: 18px;
+    color: #1877f2;
+    text-decoration: none;
+}
+
+.follow-us img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.follow-us:hover img {
+    transform: scale(1.1);
+}
+
+.follow-us:hover {
+    color: #145dbf;
+}
+
+/* Carousel Container */
+.carousel-container {
+    max-width: 900px;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Carousel */
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Individual Post */
+.post {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+    box-sizing: border-box;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Image Styling */
+.post img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.post:hover img {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Message Text */
+.post .message {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Created Time */
+.post .created-time {
+    font-size: 12px;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* Carousel Navigation Buttons */
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.carousel-buttons button {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    pointer-events: auto;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-buttons button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-buttons button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+
+/* Posts */
 
 @media (max-width: 991px) {
     .News figure .d-flex div {
