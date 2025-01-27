@@ -505,87 +505,71 @@
         
 
         <!-- 1.10. Testimonials section -->
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Membership Logo Section</title>
-          <style>
-            body {
-              margin: 0;
-              font-family: Arial, sans-serif;
-            }
-        
-            .logo-section {
-              width: 100%;
-              background-color: #f8f8f8;
-              padding: 20px 0;
-              overflow: hidden;
-            }
-        
-            .logo-slider {
-              display: flex;
-              gap: 30px;
-              animation: slide 15s linear infinite;
-              padding: 10px 0;
-            }
-        
-            .logo-slider img {
-              max-width: 150px;
-              height: auto;
-              object-fit: contain;
-              transition: transform 0.3s ease;
-            }
-        
-            .logo-slider img:hover {
-              transform: scale(1.1);
-            }
-        
-            @keyframes slide {
-              0% {
-                transform: translateX(0);
-              }
-              100% {
-                transform: translateX(-100%);
-              }
-            }
-        
-            .logo-slider-wrapper {
-              display: flex;
-              flex-wrap: nowrap;
-              gap: 20px;
-              width: fit-content;
-            }
-        
-            /* Duplicate the logos for smooth scrolling */
-            .logo-slider-wrapper .logo-slider {
-              flex-shrink: 0;
-            }
-          </style>
-        </head>
-        <body>
-          <!-- Membership Logo Section -->
-          <section class="logo-section">
-            <div class="logo-slider-wrapper">
-              <div class="logo-slider">
-                <img src="https://via.placeholder.com/150x100?text=Logo+1" alt="Membership Logo 1">
-                <img src="https://via.placeholder.com/150x100?text=Logo+2" alt="Membership Logo 2">
-                <img src="https://via.placeholder.com/150x100?text=Logo+3" alt="Membership Logo 3">
-                <img src="https://via.placeholder.com/150x100?text=Logo+4" alt="Membership Logo 4">
-              </div>
-              <!-- Duplicate for smooth infinite sliding -->
-              <div class="logo-slider">
-                <img src="https://via.placeholder.com/150x100?text=Logo+1" alt="Membership Logo 1">
-                <img src="https://via.placeholder.com/150x100?text=Logo+2" alt="Membership Logo 2">
-                <img src="https://via.placeholder.com/150x100?text=Logo+3" alt="Membership Logo 3">
-                <img src="https://via.placeholder.com/150x100?text=Logo+4" alt="Membership Logo 4">
-              </div>
-            </div>
-          </section>
-        </body>
-        </html>
-        
+        <section class="Testimonials">
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membership Logo Section</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .logo-section {
+      width: 100%;
+      background-color: #f8f8f8;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .logo-box {
+      max-width: 80%;
+      margin: 0 auto;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      background-color: #ffffff;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .logo-box img {
+      max-width: 150px;
+      max-height: 100px;
+      object-fit: contain;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .logo-box img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <!-- Main section wrapping the entire content -->
+  <section>
+    <!-- Membership Logo Section -->
+    <section class="logo-section">
+      <h2>Our Memberships</h2>
+      <div class="logo-box">
+        <!-- Add logo images here -->
+        <img src="logo1.png" alt="Membership Logo 1">
+        <img src="logo2.png" alt="Membership Logo 2">
+        <img src="logo3.png" alt="Membership Logo 3">
+        <img src="logo4.png" alt="Membership Logo 4">
+      </div>
+    </section>
+  </section>
+</body>
+</html>
+
+        </section>
         <!-- End of 1.10. Testimonials section -->
 
         
