@@ -35,20 +35,33 @@
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid">
                         <a class="nav-logo" href="index.html">
-                            <figure><img src="assets/images/logo1.png" alt="logo" ></figure>
+                            <figure><img src="assets/images/logo1.png" alt="logo"></figure>
                         </a>
-                        
                         <div class="collapse navbar-collapse">
                             <ul class="navbar-nav mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="index.html">Home</a>
+                                    <a class="nav-link active" href="index.html">Home</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="About.html">About Us</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="Services.html">Services</a>
+
+                                <li class="dropdown">
+                                    <a class="nav-link" href="Services.html">Services <i class="fa-sharp fa-solid fa-sort-down"></i></a>
+                                    <ul class="dropdown-menu">
+                                        
+                                        <li>
+                                            <a class="dropdown-item" href="Cargo.html">Distribution</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="SeaAndAir.html">Freight Forwarding </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="Trading.html">Custom House Brokerage</a>
+                                        </li>
+                                    </ul>
                                 </li>
+
                                 <li class="dropdown">
                                     <a class="nav-link" href="#">Pages <i
                                             class="fa-sharp fa-solid fa-sort-down"></i></a>
@@ -57,31 +70,15 @@
                                             <a class="dropdown-item" href="Blog.html">Our Blog</a>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="BlogDetails.html">Blog Detail</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="CaseStudies.html">Case Studies</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="CaseStudiesDetail.html">Case Studies
-                                                Detail</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="Testimonial.html">Testimonials</a>
+                                            <a class="dropdown-item" href="BlogDetails.html">Reducing Carbon Footprint</a>
                                         </li>
                                         <li>
                                             <a class="dropdown-item" href="Faq.html">FAQs</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="ErrorPage.html">404</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="ComingSoon.html">Coming Soon</a>
-                                        </li>
+                                        </li>                             
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="Team.html">Team</a>
+                                    <a class="nav-link" href="Team.html">Team</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="Contact.html">Contact</a>
@@ -89,9 +86,9 @@
                             </ul>
                         </div>
                         <div> <a href="Contact.html" class="hover1">Get a Quote</a></div>
-                    <button onclick="open_aside()" type="button" aria-label="openSide">
+                        <button onclick="open_aside()" type="button" aria-label="openSide">
                             <i class="fa-solid fa-bars"></i>
-                        </button>    
+                        </button>
                     </div>
                 </nav>
 
@@ -286,7 +283,7 @@
         <footer>
             <div class="container">
                 <div class="d-flex content">
-                    <div class="d-flex flex-column gap-4 justify-content-between ">
+                    <div class="d-flex flex-column gap-4 justify-content-between">
                         <div class="d-flex align-items-center flex-column gap-5">
                             <div>
                                 <figure><a href="index.html"><img src="assets/images/logo2.png" alt="logo"></a></figure>
@@ -305,7 +302,7 @@
                         </div>
                         <div class="d-flex gap-lg-5 gap-md-4 gap-4 align-items-end flex-wrap">
                             <div>
-                                <a href="#">
+                                <a href="https://maps.app.goo.gl/gkwPoSF1go8SyJfW7" target="_blank" rel="noopener noreferrer">
                                     <div class="d-flex gap-md-3 gap-2 align-items-center">
                                         <div><i class="fa-solid fa-house"></i></div>
                                         <div>
@@ -317,7 +314,7 @@
                             </div>
                             <hr>
                             <div>
-                                <a href="#">
+                                <a href="mailto:marketing@cargoserv.lk">
                                     <div class="d-flex gap-md-3 gap-2 align-items-center">
                                         <div><i class="fa-solid fa-envelope"></i></div>
                                         <div>
@@ -329,12 +326,12 @@
                             </div>
                             <hr>
                             <div>
-                                <a href="#">
+                                <a href="tel:+94765331181">
                                     <div class="d-flex gap-md-3 gap-2 align-items-center">
                                         <div><i class="fa-solid fa-phone"></i></div>
                                         <div>
                                             <h4>Phone Number</h4>
-                                            <p> +94 11 451 1028</p>
+                                            <p>+94 76 533 1181</p>
                                         </div>
                                     </div>
                                 </a>
@@ -353,9 +350,9 @@
                     </div>
                 </div>
             </div>
-            <div class="copyright  ">
+            <div class="copyright">
                 <div class="container">
-                    <p>Copyright &copy; Copyright Cargoserv 2024. All rights reserved.</p>
+                    <p>Copyright &copy; Cargoserv 2024. All rights reserved.</p>
                 </div>
             </div>
             <div class="scrollToTop">
