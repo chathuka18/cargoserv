@@ -696,104 +696,104 @@
 
         <!-- 1.14. News section -->
         <style>
-            .News {
-                padding: 20px 0;
-            }
+    .News {
+        padding: 20px 0;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+        text-align: center;
+    }
+
+    h4 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 15px;
+    }
+
+    .carousel-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .carousel {
+        display: flex;
+        gap: 15px;
+        transition: transform 0.3s ease-in-out;
+        scroll-behavior: smooth;
+    }
+
+    .carousel::-webkit-scrollbar {
+        display: none;
+    }
+
+    .carousel-buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .carousel-buttons button {
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        padding: 8px 15px;
+        font-size: 18px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 0 5px;
+        transition: background 0.3s;
+    }
+
+    .carousel-buttons button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
+
+    .carousel-buttons button:hover:not(:disabled) {
+        background-color: #0056b3;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+        .carousel {
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            display: flex;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 10px;
+        }
+
+        .carousel > div {
+            flex: 0 0 85%;
+            scroll-snap-align: start;
+        }
+
+        .carousel-buttons {
+            display: none; /* Hide buttons for mobile to encourage swipe */
+        }
+    }
+</style>
+
+<section class="News">
+    <div class="container">
+        <h4>Latest News</h4>
         
-            .container {
-                max-width: 1200px;
-                margin: 0 auto;
-                padding: 0 15px;
-                text-align: center;
-            }
-        
-            h4 {
-                font-size: 24px;
-                color: #333;
-                margin-bottom: 15px;
-            }
-        
-            .carousel-container {
-                position: relative;
-                overflow: hidden;
-                width: 100%;
-            }
-        
-            .carousel {
-                display: flex;
-                gap: 15px;
-                transition: transform 0.3s ease-in-out;
-                scroll-behavior: smooth;
-            }
-        
-            .carousel::-webkit-scrollbar {
-                display: none;
-            }
-        
-            .carousel-buttons {
-                display: flex;
-                justify-content: center;
-                margin-top: 10px;
-            }
-        
-            .carousel-buttons button {
-                background-color: #007BFF;
-                color: #fff;
-                border: none;
-                padding: 8px 15px;
-                font-size: 18px;
-                border-radius: 5px;
-                cursor: pointer;
-                margin: 0 5px;
-                transition: background 0.3s;
-            }
-        
-            .carousel-buttons button:disabled {
-                background-color: #ccc;
-                cursor: not-allowed;
-            }
-        
-            .carousel-buttons button:hover:not(:disabled) {
-                background-color: #0056b3;
-            }
-        
-            /* Mobile Responsive */
-            @media (max-width: 768px) {
-                .carousel {
-                    overflow-x: auto;
-                    scroll-snap-type: x mandatory;
-                    display: flex;
-                    -webkit-overflow-scrolling: touch;
-                    padding-bottom: 10px;
-                }
-        
-                .carousel > div {
-                    flex: 0 0 85%;
-                    scroll-snap-align: start;
-                }
-        
-                .carousel-buttons {
-                    display: none; /* Hide buttons for mobile to encourage swipe */
-                }
-            }
-        </style>
-        
-        <section class="News">
-            <div class="container">
-                <h4>Latest News</h4>
-                
-                <div class="carousel-container">
-                    <div class="carousel" id="carousel">
-                        <!-- Posts will be injected here -->
-                    </div>
-                    <div class="carousel-buttons">
-                        <button id="prevBtn" disabled>&lt;</button>
-                        <button id="nextBtn">&gt;</button>
-                    </div>
-                </div>
+        <div class="carousel-container">
+            <div class="carousel" id="carousel">
+                <!-- Posts will be injected here -->
             </div>
-        </section>
-        
+            <div class="carousel-buttons">
+                <button id="prevBtn" disabled>&lt;</button>
+                <button id="nextBtn">&gt;</button>
+            </div>
+        </div>
+    </div>
+</section>
+
         <!-- End of 1.14. News section -->
 
                 <!-- 1.15. Subscribe section -->
