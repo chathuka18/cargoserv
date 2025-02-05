@@ -9,6 +9,7 @@
     <meta name="robots" content="INDEX,FOLLOW">
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <!-- Favicons  -->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo.png">
     <!-- framework of css -->
@@ -135,6 +136,7 @@
       object-fit: contain;
       margin: auto;
     }
+    
   </style>
 </head>
 <body>
@@ -195,6 +197,7 @@
         object-fit: contain;
         margin: auto;
       }
+      
     </style>
   </head>
   <body>
@@ -690,22 +693,45 @@
         <!-- End of 1.13. Questions section -->
 
         <!-- 1.14. News section -->
-        <section class="News">
+        <!-- <section class="News">
             <div class="container">
                 <h4>Latest News</h4>
                 
                 
                 <div class="carousel-container">
-                    <div class="carousel" id="carousel">
+                    <div class="carousel" id="carousel"> -->
                         <!-- Posts will be injected here -->
-                    </div>
+                    <!-- </div>
                     <div class="carousel-buttons">
                         <button id="prevBtn" disabled>&lt;</button>
                         <button id="nextBtn">&gt;</button>
                     </div>
                 </div>
             </div>
+        </section> -->
+
+        <section class="News bg-gray-100 py-10">
+            <div class="container mx-auto px-4">
+                <h4 class="text-2xl font-semibold text-gray-800 text-center mb-6">Latest News</h4>
+        
+                <div class="relative overflow-hidden">
+                    <div class="carousel-container flex items-center justify-center max-h-[250px] md:max-h-[200px] lg:max-h-[250px] overflow-hidden">
+                        <div class="carousel flex gap-4 transition-transform duration-500 ease-in-out" id="carousel">
+                            <!-- Posts will be injected here -->
+                        </div>
+                    </div>
+        
+                    <!-- Navigation Buttons -->
+                    <div class="flex justify-between mt-4">
+                        <button id="prevBtn" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400 disabled:opacity-50" disabled>&lt;</button>
+                        <button id="nextBtn" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400">&gt;</button>
+                    </div>
+                </div>
+            </div>
         </section>
+        
+        
+        
 
         <!-- End of 1.14. News section -->
 
