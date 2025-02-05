@@ -135,6 +135,60 @@
                         height: 50%;
                         object-fit: contain;
                       }
+
+                      .carousel-container {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    gap: 10px; /* Space between posts on mobile */
+    transition: transform 0.5s ease-in-out;
+}
+
+.post {
+    width: 100%; /* Full width on mobile */
+    flex-shrink: 0; /* Prevent shrinking */
+    text-align: center; /* Center-align content */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.post img {
+    width: 100%;
+    height: 200px; /* Reduced height for better mobile view */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.message {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.created-time {
+    font-size: 12px;
+    color: #888;
+}
+
+/* Media Queries for responsiveness on different devices */
+@media (min-width: 768px) {
+    .post {
+        width: 50%; /* Show two posts at a time on tablets */
+    }
+}
+
+@media (min-width: 1024px) {
+    .post {
+        width: 33.33%; /* Show three posts at a time on larger screens */
+    }
+}
+
                     </style>
                   </head>
                   <body>
@@ -630,18 +684,21 @@
         <!-- End of 1.13. Questions section -->
 
         <!-- 1.14. News section -->
-        <section class="News">
-            <div class="container">
-                <h4>Latest News</h4>
-                
-                
-                <div class="carousel-container">
-                    <div class="carousel" id="carousel">
-                        <!-- Posts will be injected here -->
+        <section class="News bg-gray-100 py-10">
+            <div class="container mx-auto px-4">
+                <h4 class="text-2xl font-semibold text-gray-800 text-center mb-6">Latest News</h4>
+        
+                <div class="relative overflow-hidden">
+                    <div class="carousel-container flex items-center justify-center max-h-[250px] overflow-hidden">
+                        <div class="carousel flex gap-4 transition-transform duration-500 ease-in-out" id="carousel">
+                            <!-- Posts will be injected here -->
+                        </div>
                     </div>
-                    <div class="carousel-buttons">
-                        <button id="prevBtn" disabled>&lt;</button>
-                        <button id="nextBtn">&gt;</button>
+        
+                    <!-- Navigation Buttons -->
+                    <div class="flex justify-between mt-4">
+                        <button id="prevBtn" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400 disabled:opacity-50" disabled>&lt;</button>
+                        <button id="nextBtn" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400">&gt;</button>
                     </div>
                 </div>
             </div>
@@ -809,104 +866,112 @@
     <script src="assets/js/custom.js"></script>
     <!-- animation from javascript -->
     <script src="assets/js/aos.js"></script>
+    
+    
     <script>
         const accessToken = "EAAN8sJZAFLZAMBOZCYOKAFcnSaphYJ1DcX1b4uEu7qZBribia1dvMlycTZCyTMyAO4xLrRaCE897F5YnBcBhJ303fcxbJONZCXZC0GcrxOcqaJDd97vEzMz7tvdD3oD7bdc4pHvWZA0AXF4aZCyitdA9ooCcfuSAjDJ93nC2f1oLxd0MSwTSlVhf0tsO7FiWSfQMVQPNcRNWg";
         const url = "https://graph.facebook.com/v15.0/457763814094558/posts?fields=id,message,created_time,attachments{media}&access_token=" + accessToken;
-
+    
         let currentIndex = 0;
-
+        let postsPerView = 1; // Show one post at a time on mobile
+        let posts = []; // Array to store fetched posts
+    
         async function fetchPosts() {
             try {
                 const response = await fetch(url);
                 if (!response.ok) throw new Error("Failed to fetch posts");
-
+    
                 const data = await response.json();
-                const posts = data.data;
-
+                posts = data.data.slice(0, 10); // Get the latest 10 posts
+    
                 const carousel = document.getElementById("carousel");
-
+                carousel.innerHTML = ""; // Clear previous posts
+    
                 posts.forEach(post => {
                     const postElement = document.createElement("div");
-                    postElement.className = "post";
-
+                    postElement.className = "post w-full flex-shrink-0"; // Ensure responsiveness and add width
+    
                     const message = post.message || "No message available";
                     const createdTime = new Date(post.created_time).toLocaleString();
-
+    
                     let mediaHTML = "";
                     if (post.attachments && post.attachments.data) {
                         post.attachments.data.forEach(attachment => {
                             if (attachment.media && attachment.media.image) {
-                                mediaHTML = `<img src="${attachment.media.image.src}" alt="Post image">`;
+                                mediaHTML = `<img class="w-full h-[200px] object-cover rounded-lg" src="${attachment.media.image.src}" alt="Post image">`;
                             }
                         });
                     }
-
+    
                     postElement.innerHTML = `
-                            ${mediaHTML}
-                            <div class="message">${message}</div>
-                            <div class="created-time">Posted on: ${createdTime}</div>
-                        `;
-
+                        ${mediaHTML}
+                        <div class="message text-sm text-gray-700 mt-2">${message}</div>
+                        <div class="created-time text-xs text-gray-500">Posted on: ${createdTime}</div>
+                    `;
+    
                     // Redirect to Facebook post on click
                     postElement.addEventListener("click", () => {
                         window.open(`https://www.facebook.com/${post.id}`, "_blank");
                     });
-
+    
                     carousel.appendChild(postElement);
                 });
-
+    
                 setupCarousel(posts.length);
             } catch (error) {
                 console.error("Error fetching posts:", error.message);
             }
         }
-
+    
         function setupCarousel(totalPosts) {
             const carousel = document.getElementById("carousel");
             const prevBtn = document.getElementById("prevBtn");
             const nextBtn = document.getElementById("nextBtn");
-
+    
             function updateButtons() {
                 prevBtn.disabled = currentIndex === 0;
-                nextBtn.disabled = currentIndex >= totalPosts - 3;
+                nextBtn.disabled = currentIndex >= totalPosts - postsPerView;
             }
-
+    
             function moveCarousel() {
-                carousel.style.transform = `translateX(-${currentIndex * (100 / 3)}%)`;
+                carousel.style.transform = `translateX(-${currentIndex * (100 / postsPerView)}%)`;
                 updateButtons();
             }
-
-            function autoMoveCarousel(totalPosts) {
+    
+            function autoMoveCarousel() {
                 setInterval(() => {
-                    if (currentIndex < totalPosts - 3) {
-                        currentIndex++;
+                    if (currentIndex < totalPosts - 1) {
+                        currentIndex++; // Move to the next post
                     } else {
-                        currentIndex = 0; // Reset to the beginning after the last post
+                        currentIndex = 0; // Reset to the first post after reaching the last
                     }
                     moveCarousel();
-                }, 3000); // Adjust the interval time as needed (3000ms = 3 seconds)
+                }, 15000); // Adjust the interval time as needed (3000ms = 3 seconds)
             }
-
-
+    
             prevBtn.addEventListener("click", () => {
                 if (currentIndex > 0) {
                     currentIndex--;
                     moveCarousel();
                 }
             });
-
+    
             nextBtn.addEventListener("click", () => {
-                if (currentIndex < totalPosts - 3) {
+                if (currentIndex < totalPosts - 1) {
                     currentIndex++;
                     moveCarousel();
                 }
             });
-
+    
             updateButtons();
-            autoMoveCarousel(totalPosts);
+            autoMoveCarousel(); // Start the auto-move loop
         }
+    
+        // Initial fetch
         fetchPosts();
     </script>
+    
+    
     <script>
         AOS.init({
             once: true,
