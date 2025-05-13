@@ -238,7 +238,123 @@
                 making a substantial impact in reducing your carbon footprint.
             </p>
         </div>
-        
+        <head>
+  <meta charset="UTF-8">
+  <title>Carbon Emission Savings Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      color: #333;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      color: #1a4d2e;
+    }
+
+    .calculator {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .results {
+      margin-top: 2rem;
+    }
+
+    .result-box {
+      background: #e8f5e9;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      border-radius: 12px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #2e7d32;
+    }
+
+    .button {
+      margin-top: 2rem;
+      background: #1a4d2e;
+      color: #fff;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .button:hover {
+      background: #145131;
+    }
+
+    .label {
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Carbon Emission Savings Calculator</h1>
+  <div class="calculator">
+    <p><strong>Assumptions:</strong></p>
+    <p class="label">Road Emission Factor: 0.1 kg CO₂/tonne-km</p>
+    <p class="label">Rail Emission Factor: 0.02 kg CO₂/tonne-km</p>
+    <p class="label">Cargo Weight: 9,562 tonnes/month</p>
+    <p class="label">Road Distance: 200,600 km/month</p>
+    <p class="label">Rail Distance: 9,720 km/month</p>
+
+    <button class="button" onclick="calculateEmissions()">Calculate</button>
+
+    <div class="results">
+      <div class="result-box">Road Emissions: <span id="road">0</span> kg CO₂</div>
+      <div class="result-box">Rail Emissions: <span id="rail">0</span> kg CO₂</div>
+      <div class="result-box">Carbon Savings: <span id="savings">0</span> kg CO₂</div>
+    </div>
+  </div>
+
+  <script>
+    function animateValue(id, start, end, duration) {
+      let range = end - start;
+      let current = start;
+      let increment = range / (duration / 50);
+      let obj = document.getElementById(id);
+
+      let timer = setInterval(() => {
+        current += increment;
+        if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
+          current = end;
+          clearInterval(timer);
+        }
+        obj.innerText = Math.round(current).toLocaleString();
+      }, 50);
+    }
+
+    function calculateEmissions() {
+      const weight = 9562; // tonnes
+      const roadDistance = 200600; // km
+      const railDistance = 9720; // km
+      const roadFactor = 0.1; // kg CO2 per tonne-km
+      const railFactor = 0.02;
+
+      const roadEmissions = roadDistance * weight * roadFactor;
+      const railEmissions = railDistance * weight * railFactor;
+      const savings = roadEmissions - railEmissions;
+
+      animateValue("road", 0, roadEmissions, 2000);
+      animateValue("rail", 0, railEmissions, 2000);
+      animateValue("savings", 0, savings, 2000);
+    }
+  </script>
+
+</body>
         
         <!-- End of 6.1. Reply section -->
 
