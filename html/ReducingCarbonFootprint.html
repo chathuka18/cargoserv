@@ -238,85 +238,29 @@
                 making a substantial impact in reducing your carbon footprint.
             </p>
         </div>
-        <head>
-  <meta charset="UTF-8">
-  <title>Carbon Emission Savings Calculator</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f0f4f8;
-      color: #333;
-      padding: 2rem;
-      text-align: center;
-    }
+        <section class="carbon-calculator" style="font-family: 'Segoe UI', sans-serif; background: #f9fbfc; padding: 60px 20px;">
+  <div style="max-width: 900px; margin: auto; background: #ffffff; padding: 40px; border-radius: 20px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); text-align: center;">
+    <h2 style="color: #003a63; margin-bottom: 20px;">Carbon Emission Savings Calculator</h2>
 
-    h1 {
-      color: #1a4d2e;
-    }
-
-    .calculator {
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      padding: 2rem;
-      max-width: 700px;
-      margin: auto;
-    }
-
-    .results {
-      margin-top: 2rem;
-    }
-
-    .result-box {
-      background: #e8f5e9;
-      padding: 1.5rem;
-      margin: 1rem 0;
-      border-radius: 12px;
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #2e7d32;
-    }
-
-    .button {
-      margin-top: 2rem;
-      background: #1a4d2e;
-      color: #fff;
-      padding: 0.8rem 2rem;
-      border: none;
-      border-radius: 10px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .button:hover {
-      background: #145131;
-    }
-
-    .label {
-      font-size: 0.9rem;
-      color: #666;
-    }
-  </style>
-</head>
-<body>
-
-  <h1>Carbon Emission Savings Calculator</h1>
-  <div class="calculator">
     <p><strong>Assumptions:</strong></p>
-    <p class="label">Road Emission Factor: 0.1 kg CO₂/tonne-km</p>
-    <p class="label">Rail Emission Factor: 0.02 kg CO₂/tonne-km</p>
-    <p class="label">Cargo Weight: 9,562 tonnes/month</p>
-    <p class="label">Road Distance: 200,600 km/month</p>
-    <p class="label">Rail Distance: 9,720 km/month</p>
+    <p style="color: #666;">Road Emission Factor: <strong>0.1 kg CO₂/tonne-km</strong></p>
+    <p style="color: #666;">Rail Emission Factor: <strong>0.02 kg CO₂/tonne-km</strong></p>
+    <p style="color: #666;">Cargo Weight: <strong>9,562 tonnes/month</strong></p>
+    <p style="color: #666;">Road Distance: <strong>200,600 km/month</strong></p>
+    <p style="color: #666;">Rail Distance: <strong>9,720 km/month</strong></p>
 
-    <button class="button" onclick="calculateEmissions()">Calculate</button>
+    <button onclick="calculateEmissions()" style="margin-top: 20px; background: #003a63; color: white; border: none; padding: 12px 24px; font-size: 1rem; border-radius: 8px; cursor: pointer;">Calculate</button>
 
-    <div class="results">
-      <div class="result-box">Road Emissions: <span id="road">0</span> kg CO₂</div>
-      <div class="result-box">Rail Emissions: <span id="rail">0</span> kg CO₂</div>
-      <div class="result-box">Carbon Savings: <span id="savings">0</span> kg CO₂</div>
+    <div style="margin-top: 40px;">
+      <div style="background: #e3f4e0; margin: 16px auto; padding: 20px; border-radius: 12px; font-size: 1.4rem; font-weight: bold; color: #2e7d32;">
+        Road Emissions: <span id="road">0</span> kg CO₂
+      </div>
+      <div style="background: #e0f7fa; margin: 16px auto; padding: 20px; border-radius: 12px; font-size: 1.4rem; font-weight: bold; color: #00796b;">
+        Rail Emissions: <span id="rail">0</span> kg CO₂
+      </div>
+      <div style="background: #fce4ec; margin: 16px auto; padding: 20px; border-radius: 12px; font-size: 1.4rem; font-weight: bold; color: #ad1457;">
+        Carbon Savings: <span id="savings">0</span> kg CO₂
+      </div>
     </div>
   </div>
 
@@ -338,10 +282,10 @@
     }
 
     function calculateEmissions() {
-      const weight = 9562; // tonnes
-      const roadDistance = 200600; // km
-      const railDistance = 9720; // km
-      const roadFactor = 0.1; // kg CO2 per tonne-km
+      const weight = 9562;
+      const roadDistance = 200600;
+      const railDistance = 9720;
+      const roadFactor = 0.1;
       const railFactor = 0.02;
 
       const roadEmissions = roadDistance * weight * roadFactor;
@@ -353,8 +297,8 @@
       animateValue("savings", 0, savings, 2000);
     }
   </script>
+</section>
 
-</body>
         
         <!-- End of 6.1. Reply section -->
 
