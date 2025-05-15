@@ -3386,6 +3386,14 @@ footer .copyright p {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.SubPage-Hero2 {
+    background: url("../images/bg/servicesbanner.png");
+    background-position: 80% 100%;
+    position: relative;
+    padding: 100px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .SubPage-Hero::before {
     content: "";
