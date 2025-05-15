@@ -3751,6 +3751,37 @@ footer .copyright p {
     text-align: center;
 }
 
+.Values .rounded-box {
+    border: 2px solid #9AD0EC;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #3E3F41;
+    text-align: center;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.Values .rounded-box h3 {
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.Values .rounded-box h5 {
+    font-size: 1rem;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.Values .custom-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+
+
 @media (max-width: 991px) {
 
     .Values .row:nth-of-type(1) figure,
@@ -3794,13 +3825,6 @@ footer .copyright p {
     .Values p {
         width: 100%;
     }
-}
-/* Bullet list alignment inside cards */
-.card ul {
-    display: inline-block;       
-    text-align: left;            
-    padding-left: 1rem;         
-    margin: 0 auto;              
 }
 
 
