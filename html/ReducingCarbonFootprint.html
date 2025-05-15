@@ -28,114 +28,118 @@
 <body>
 
     <div class="site-wrapper">
-
         <!-- 1.1. Header section -->
         <header>
             <div class="container">
                 <!-- Main Navbar -->
                 <nav class="navbar navbar-expand-lg">
-                    <div class="container-fluid">
-                        <a class="nav-logo" href="index.html">
-                            <figure><img src="assets/images/logo1.png" alt="logo"></figure>
-                        </a>
-                        <div class="collapse navbar-collapse">
-                            <ul class="navbar-nav mb-2 mb-lg-0">
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="index.html">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="About.html">About Us</a>
-                                </li>
+    <div class="container-fluid">
+        <a class="nav-logo" href="index.html">
+            <figure><img src="assets/images/logo1.png" alt="logo"></figure>
+        </a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="About.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ReducingCarbonFootprint.html">Reducing Carbon Footprint</a>
+                </li>
 
-                                <li class="dropdown">
-                                    <a class="nav-link" href="Services.html">Services <i class="fa-sharp fa-solid fa-sort-down"></i></a>
-                                    <ul class="dropdown-menu">
-                                        
-                                        <li>
-                                            <a class="dropdown-item" href="Cargo.html">Distribution</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="SeaAndAir.html">Freight Forwarding </a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="Trading.html">Custom House Brokerage</a>
-                                        </li>
-                                    </ul>
-                                </li>
+                <li class="dropdown">
+                    <a class="nav-link" href="Services.html">Services <i class="fa-sharp fa-solid fa-sort-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="Distribution.html">Distribution</a></li>
+                        <li><a class="dropdown-item" href="FreightForwarding.html">Freight Forwarding</a></li>
+                        <li><a class="dropdown-item" href="CustomHouseBrokerage.html">Custom House Brokerage</a></li>
+                        <li><a class="dropdown-item" href="ProjectCargo.html">Project Cargo Handling</a></li>
+                        <li><a class="dropdown-item" href="3PL.html">3PL Services</a></li>
+                        <li><a class="dropdown-item" href="InlandTransport.html">Inland Transportation Services</a></li>
+                    </ul>
+                </li>
 
-                                <li class="dropdown">
-                                    <a class="nav-link" href="#">Pages <i
-                                            class="fa-sharp fa-solid fa-sort-down"></i></a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a class="dropdown-item" href="Blog.html">Our Blog</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="BlogDetails.html">Reducing Carbon Footprint</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="Faq.html">FAQs</a>
-                                        </li>                             
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="Team.html">Team</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="Contact.html">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div> <a href="Contact.html" class="hover1">Get a Quote</a></div>
-                        <button onclick="open_aside()" type="button" aria-label="openSide">
-                            <i class="fa-solid fa-bars"></i>
-                        </button>
-                    </div>
+                <li class="dropdown">
+                    <a class="nav-link" href="#">Pages <i class="fa-sharp fa-solid fa-sort-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="Blog.html">Our Blog</a></li>
+                        <li><a class="dropdown-item" href="Faq.html">FAQs</a></li>
+                    </ul>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="Team.html">Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <a href="Contact.html" class="hover1">Get a Inquiry</a>
+        </div>
+        <button onclick="open_aside()" type="button" aria-label="openSide">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
                 </nav>
 
                 <!-- Side Navbar for Small Screen -->
                 <aside>
                     <div id="sideNav">
-                        <div class="d-flex nav-logo ">
-                            <figure class="navbar-brand">
-                                <a href="index.html"><img src="assets/images/logo1.png" alt="logo"></a>
-                            </figure>
-                            <button class="fa-solid fa-xmark" onclick="close_aside()" aria-label="closeSide"></button>
-                        </div>
-                        <ul>
-                            <li class="nav-item">
-                                <a aria-current="page" href="index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="About.html">About Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="Services.html">Services</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="Team.html">Team</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="Contact.html">Contact</a>
-                            </li>
-                            <li class="nav-item">
-                                <div id="slid-btn">
-                                    <button>Pages</button>
-                                    <i class="fa-solid fa-caret-down ps-2"></i>
-                                </div>
-                                <ul id="slid-drop">
-                                    <li><a href="Blog.html">Our Blog</a></li>
-                                    <li><a class="active" href="BlogDetails.html">Blog Detail</a></li>
-                                    <li><a href="CaseStudies.html">Case Studies</a></li>
-                                    <li><a href="CaseStudiesDetail.html">Case Studies Detail</a></li>
-                                    <li><a href="Testimonial.html">Testimonials</a></li>
-                                    <li><a href="Faq.html">FAQs</a></li>
-                                    <li><a href="ErrorPage.html">404</a></li>
-                                    <li><a href="ComingSoon.html">Coming Soon</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
+        <div class="d-flex nav-logo">
+            <figure class="navbar-brand">
+                <a href="index.html"><img src="assets/images/logo1.png" alt="logo"></a>
+            </figure>
+            <button class="fa-solid fa-xmark" onclick="close_aside()" aria-label="closeSide"></button>
+        </div>
+        <ul>
+            <li class="nav-item">
+                <a class="active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="About.html">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a href="Reducing Carbon Footprint.html">Reducing Carbon Footprint</a>
+            </li>
+
+            <li class="nav-item">
+                <div id="slid-btn">
+                    <button>Services</button>
+                    <i class="fa-solid fa-caret-down ps-2"></i>
+                </div>
+                <ul id="slid-drop">
+                    <li><a href="Distribution.html">Distribution</a></li>
+                    <li><a href="FreightForwarding.html">Freight Forwarding</a></li>
+                    <li><a href="Customs House Brokerage.html">Customs House Brokerage</a></li>
+                    <li><a href="ProjectCargo.html">Project Cargo Handling</a></li>
+                    <li><a href="3PL.html">3PL Services</a></li>
+                    <li><a href="InlandTransport.html">Inland Transportation Services</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a href="Team.html">Team</a>
+            </li>
+            <li class="nav-item">
+                <a href="Contact.html">Contact</a>
+            </li>
+
+            <li class="nav-item">
+                <div id="slid-btn">
+                    <button>Pages</button>
+                    <i class="fa-solid fa-caret-down ps-2"></i>
+                </div>
+                <ul id="slid-drop">
+                    <li><a href="Blog.html">Our Blog</a></li>
+                    <li><a href="Faq.html">FAQs</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
                 </aside>
             </div>
         </header>
@@ -234,7 +238,67 @@
                 making a substantial impact in reducing your carbon footprint.
             </p>
         </div>
-        
+        <section class="carbon-calculator" style="font-family: 'Segoe UI', sans-serif; background: #f9fbfc; padding: 60px 20px;">
+  <div style="max-width: 900px; margin: auto; background: #ffffff; padding: 40px; border-radius: 20px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); text-align: center;">
+    <h2 style="color: #003a63; margin-bottom: 20px;">Carbon Emission Savings Calculator</h2>
+
+    <p><strong>Assumptions:</strong></p>
+    <p style="color: #666;">Road Emission Factor: <strong>0.1 kg CO₂/tonne-km</strong></p>
+    <p style="color: #666;">Rail Emission Factor: <strong>0.02 kg CO₂/tonne-km</strong></p>
+    <p style="color: #666;">Cargo Weight: <strong>9,562 tonnes/month</strong></p>
+    <p style="color: #666;">Road Distance: <strong>200,600 km/month</strong></p>
+    <p style="color: #666;">Rail Distance: <strong>9,720 km/month</strong></p>
+
+    <button onclick="calculateEmissions()" style="margin-top: 20px; background: #003a63; color: white; border: none; padding: 12px 24px; font-size: 1rem; border-radius: 8px; cursor: pointer;">Calculate</button>
+
+    <div style="margin-top: 40px;">
+      <div style="background: #e3f4e0; margin: 16px auto; padding: 20px; border-radius: 12px; font-size: 1.4rem; font-weight: bold; color: #2e7d32;">
+        Road Emissions: <span id="road">0</span> kg CO₂
+      </div>
+      <div style="background: #e0f7fa; margin: 16px auto; padding: 20px; border-radius: 12px; font-size: 1.4rem; font-weight: bold; color: #00796b;">
+        Rail Emissions: <span id="rail">0</span> kg CO₂
+      </div>
+      <div style="background: #fce4ec; margin: 16px auto; padding: 20px; border-radius: 12px; font-size: 1.4rem; font-weight: bold; color: #ad1457;">
+        Carbon Savings: <span id="savings">0</span> kg CO₂
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function animateValue(id, start, end, duration) {
+      let range = end - start;
+      let current = start;
+      let increment = range / (duration / 50);
+      let obj = document.getElementById(id);
+
+      let timer = setInterval(() => {
+        current += increment;
+        if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
+          current = end;
+          clearInterval(timer);
+        }
+        obj.innerText = Math.round(current).toLocaleString();
+      }, 50);
+    }
+
+    function calculateEmissions() {
+      const weight = 9562;
+      const roadDistance = 200600;
+      const railDistance = 9720;
+      const roadFactor = 0.1;
+      const railFactor = 0.02;
+
+      const roadEmissions = roadDistance * weight * roadFactor;
+      const railEmissions = railDistance * weight * railFactor;
+      const savings = roadEmissions - railEmissions;
+
+      animateValue("road", 0, roadEmissions, 2000);
+      animateValue("rail", 0, railEmissions, 2000);
+      animateValue("savings", 0, savings, 2000);
+    }
+  </script>
+</section>
+
         
         <!-- End of 6.1. Reply section -->
 

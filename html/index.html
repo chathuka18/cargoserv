@@ -32,64 +32,59 @@
             <div class="container">
                 <!-- Main Navbar -->
                 <nav class="navbar navbar-expand-lg">
-                    <div class="container-fluid">
-                        <a class="nav-logo" href="index.html">
-                            <figure><img src="assets/images/logo1.png" alt="logo"></figure>
-                        </a>
-                        <div class="collapse navbar-collapse">
-                            <ul class="navbar-nav mb-2 mb-lg-0">
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="index.html">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="About.html">About Us</a>
-                                </li>
+    <div class="container-fluid">
+        <a class="nav-logo" href="index.html">
+            <figure><img src="assets/images/logo1.png" alt="logo"></figure>
+        </a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="About.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ReducingCarbonFootprint.html">Reducing Carbon Footprint</a>
+                </li>
 
-                                <li class="dropdown">
-                                    <a class="nav-link" href="Services.html">Services <i class="fa-sharp fa-solid fa-sort-down"></i></a>
-                                    <ul class="dropdown-menu">
-                                        
-                                        <li>
-                                            <a class="dropdown-item" href="Cargo.html">Distribution</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="SeaAndAir.html">Freight Forwarding </a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="Trading.html">Custom House Brokerage</a>
-                                        </li>
-                                    </ul>
-                                </li>
+                <li class="dropdown">
+                    <a class="nav-link" href="Services.html">Services <i class="fa-sharp fa-solid fa-sort-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="Distribution.html">Distribution</a></li>
+                        <li><a class="dropdown-item" href="FreightForwarding.html">Freight Forwarding</a></li>
+                        <li><a class="dropdown-item" href="CustomHouseBrokerage.html">Custom House Brokerage</a></li>
+                        <li><a class="dropdown-item" href="ProjectCargo.html">Project Cargo Handling</a></li>
+                        <li><a class="dropdown-item" href="3PL.html">3PL Services</a></li>
+                        <li><a class="dropdown-item" href="InlandTransport.html">Inland Transportation Services</a></li>
+                    </ul>
+                </li>
 
-                                <li class="dropdown">
-                                    <a class="nav-link" href="#">Pages <i
-                                            class="fa-sharp fa-solid fa-sort-down"></i></a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a class="dropdown-item" href="Blog.html">Our Blog</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="BlogDetails.html">Reducing Carbon Footprint</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="Faq.html">FAQs</a>
-                                        </li>                             
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="Team.html">Team</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="Contact.html">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div> <a href="Contact.html" class="hover1">Get a Quote</a></div>
-                        <button onclick="open_aside()" type="button" aria-label="openSide">
-                            <i class="fa-solid fa-bars"></i>
-                        </button>
-                    </div>
-                </nav>
+                <li class="dropdown">
+                    <a class="nav-link" href="#">Pages <i class="fa-sharp fa-solid fa-sort-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="Blog.html">Our Blog</a></li>
+                        <li><a class="dropdown-item" href="Faq.html">FAQs</a></li>
+                    </ul>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="Team.html">Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <a href="Contact.html" class="hover1">Get a Inquiry</a>
+        </div>
+        <button onclick="open_aside()" type="button" aria-label="openSide">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
+</nav>
+
                 <!-- Side Navbar for Small Screen -->
 
                 
@@ -210,57 +205,60 @@
 
                   
                 <aside>
-                    <div id="sideNav">
-                        <div class="d-flex nav-logo ">
-                            <figure class="navbar-brand">
-                                <a href="index.html"><img src="assets/images/logo1.png" alt="logo"></a>
-                            </figure>
-                            <button class="fa-solid fa-xmark" onclick="close_aside()" aria-label="closeSide"></button>
-                        </div>
-                        <ul>
-                            <li class="nav-item">
-                                <a class="active" aria-current="page" href="index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="About.html">About Us</a>
-                            </li>
+    <div id="sideNav">
+        <div class="d-flex nav-logo">
+            <figure class="navbar-brand">
+                <a href="index.html"><img src="assets/images/logo1.png" alt="logo"></a>
+            </figure>
+            <button class="fa-solid fa-xmark" onclick="close_aside()" aria-label="closeSide"></button>
+        </div>
+        <ul>
+            <li class="nav-item">
+                <a class="active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="About.html">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a href="Reducing Carbon Footprint.html">Reducing Carbon Footprint</a>
+            </li>
 
-                            <li class="nav-item">
-                                <div id="slid-btn">
-                                    <button>Services</button>
-                                    <i class="fa-solid fa-caret-down ps-2"></i>
-                                </div>
-                                <ul id="slid-drop">
-                                    <li><a href="Cargo.html">Distribution</a></li>
-                                    <li><a href="SeaAndAir.html">Freight Forwarding</a></li>
-                                    <li><a href="Trading.html">Customs House Brokerage</a></li>
-                                    <li><a href="NVOCC.html">Project Cargo Handling</a></li>
-                                    <li><a href="Container.html">3PL Services</a></li>
-                                    <li><a href="ShipAgency.html">Inland Transportation Services</a></li>
-                                </ul>
-                            </li>
+            <li class="nav-item">
+                <div id="slid-btn">
+                    <button>Services</button>
+                    <i class="fa-solid fa-caret-down ps-2"></i>
+                </div>
+                <ul id="slid-drop">
+                    <li><a href="Distribution.html">Distribution</a></li>
+                    <li><a href="FreightForwarding.html">Freight Forwarding</a></li>
+                    <li><a href="Customs House Brokerage.html">Customs House Brokerage</a></li>
+                    <li><a href="ProjectCargo.html">Project Cargo Handling</a></li>
+                    <li><a href="3PL.html">3PL Services</a></li>
+                    <li><a href="InlandTransport.html">Inland Transportation Services</a></li>
+                </ul>
+            </li>
 
-                            <li class="nav-item">
-                                <a href="Team.html">Team</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="Contact.html">Contact</a>
-                            </li>
-                            <li class="nav-item">
-                                <div id="slid-btn">
-                                    <button>Pages</button>
-                                    <i class="fa-solid fa-caret-down ps-2"></i>
-                                </div>
-                                <ul id="slid-drop">
-                                    <li><a href="Blog.html">Our Blog</a></li>
-                                    <li><a href="BlogDetails.html">Reducing Carbon Footprint</a></li>
-                                    <li><a href="Faq.html">FAQs</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </aside>
-            </div>
+            <li class="nav-item">
+                <a href="Team.html">Team</a>
+            </li>
+            <li class="nav-item">
+                <a href="Contact.html">Contact</a>
+            </li>
+
+            <li class="nav-item">
+                <div id="slid-btn">
+                    <button>Pages</button>
+                    <i class="fa-solid fa-caret-down ps-2"></i>
+                </div>
+                <ul id="slid-drop">
+                    <li><a href="Blog.html">Our Blog</a></li>
+                    <li><a href="Faq.html">FAQs</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</aside>
+
         </header>
         <!-- End of 1.1. Header section -->
         <!-- 1.2. Hero section -->
@@ -272,7 +270,7 @@
                     <p>Cargoserv is a Ceyline Group company. It was established in 1993 as a shipping Agency Company with a mandate to further
                     develop freight forwarding, cargo consolidations, NVOCC operations and all related freight operations.</p>
                     <div><a href="Contact.html" class="hover2">Contact Us</a></div>
-                </div><br><br><br><br><br><br><br><br><br><br><br><br>               
+                </div>               
             </div>
         </section>
 
@@ -333,7 +331,7 @@
                         <div><a href="#"><img src="assets/images/icons/logoipsum7.png" alt="logo7"></a></div>
                         <div><a href="#"><img src="assets/images/icons/logoipsum8.png" alt="logo8"></a></div>
                         <div><a href="#"><img src="assets/images/icons/logoipsum9.png" alt="logo9"></a></div>
-                        <div><a href="#"><img src="assets/images/icons/logoipsum5.png" alt="logo10"></a></div>
+                        <div><a href="#"><img src="assets/images/icons/logoipsum10.png" alt="logo10"></a></div>
                     </div>
                 </div>
             </div>
@@ -350,7 +348,7 @@
                             <h4>Reducing Carbon Footprint</h4>
                             <h2>Using Cargo Transport Systems, We Save Trees</h2>
                             <p>Our innovative logistics solutions prioritize sustainability, ensuring a greener future for generations to come.</p><br>
-                            <button onclick="window.location.href='BlogDetails.html'" class="btn btn-primary">Learn More</button>
+                            <button onclick="window.location.href='ReducingCarbonFootprint.html'" class="btn btn-primary">Learn More</button>
                         </div>
                     </div>
                 </div>
