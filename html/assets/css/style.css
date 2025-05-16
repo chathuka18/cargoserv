@@ -4351,7 +4351,6 @@ footer .copyright p {
 }
 
 
-
 /* 6.2. Reply section */
 .Reply {
     padding-top: 50px;
@@ -4363,6 +4362,44 @@ footer .copyright p {
     color: #3E3F41;
 }
 
+/* Two-column layout */
+.carbon-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.carbon-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.carbon-image-column {
+    flex: 1;
+    min-width: 300px;
+}
+
+.carbon-content-column {
+    flex: 2;
+    min-width: 300px;
+}
+
+.carbon-image-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.carbon-img {
+    width: 100%;   /* Fills the left column */
+    height: auto;  /* Maintains aspect ratio */
+    max-height: 500px; /* Prevents overly tall images */
+}
+
+/* Rest of your existing styles */
 .Reply form {
     padding: 40px 0px 0px;
 }
@@ -4415,6 +4452,10 @@ footer .copyright p {
     .Reply input {
         width: 100%;
     }
+    
+    .carbon-columns {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 480px) {
@@ -4422,8 +4463,12 @@ footer .copyright p {
         padding-top: 30px;
         padding-bottom: 50px;
     }
+    
+    .carbon-image-column,
+    .carbon-content-column {
+        min-width: 100%;
+    }
 }
-
 /* End of 6.2. Reply section */
 
 
