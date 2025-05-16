@@ -3379,6 +3379,7 @@ footer .copyright p {
     background-size: cover;
 }
 
+
 .SubPage-Hero::before {
     content: "";
     position: absolute;
@@ -3388,7 +3389,6 @@ footer .copyright p {
     left: 0px;
     background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.6) 39.58%, rgba(0, 0, 0, 0.35) 100%);
 }
-
 .SubPage-Hero h1 {
     color: #FFF;
     opacity: 0.99;
@@ -3400,6 +3400,64 @@ footer .copyright p {
     max-width: 730px;
     opacity: 0.99;
 }
+.SubPage-Hero1 {
+    background: url("../images/bg/carbonbanner.png");
+    background-position: 80% 100%;
+    position: relative;
+    padding: 100px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.SubPage-Hero1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.6) 39.58%, rgba(0, 0, 0, 0.35) 100%);
+}
+.SubPage-Hero1 h1 {
+    color: #FFF;
+    opacity: 0.99;
+}
+
+.SubPage-Hero1 p {
+    color: #FFF;
+    margin-top: 15px;
+    max-width: 730px;
+    opacity: 0.99;
+}
+.SubPage-Hero2 {
+    background: url("../images/bg/servicesbanner.png");
+    background-position: 80% 100%;
+    position: relative;
+    padding: 100px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.SubPage-Hero2::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.6) 39.58%, rgba(0, 0, 0, 0.35) 100%);
+}
+.SubPage-Hero2 h1 {
+    color: #FFF;
+    opacity: 0.99;
+}
+
+.SubPage-Hero2 p {
+    color: #FFF;
+    margin-top: 15px;
+    max-width: 730px;
+    opacity: 0.99;
+}
+
+
 
 @media (max-width: 768px) {
     .SubPage-Hero {
@@ -3751,6 +3809,37 @@ footer .copyright p {
     text-align: center;
 }
 
+.Values .rounded-box {
+    border: 2px solid #9AD0EC;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #3E3F41;
+    text-align: center;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.Values .rounded-box h3 {
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.Values .rounded-box h5 {
+    font-size: 1rem;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.Values .custom-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+
+
 @media (max-width: 991px) {
 
     .Values .row:nth-of-type(1) figure,
@@ -3795,6 +3884,7 @@ footer .copyright p {
         width: 100%;
     }
 }
+
 
 /* End of 2.3. Values section */
 
