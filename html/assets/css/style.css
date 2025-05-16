@@ -331,25 +331,45 @@ aside li {
 /* End of 1.1. Header section */
 /* 1.2. Hero section */
 .Hero {
-    background: url('../images/bg/2.png'), #F7F8FF;
-    background-size: 100% 67%;
-    background-repeat: no-repeat;
-    background-position: top center;
-    padding: 160px 0px 100px;
-    overflow-x: hidden;
     position: relative;
+    padding: 160px 0px 100px;
+    overflow: hidden;
+    color: #FFF;
+}
+
+.hero-video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-video-bg video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #000000 -14.3%, rgba(0, 0, 0, 0.74) 41.8%, rgba(0, 0, 0, 0.21) 100.18%);
+    z-index: 1;
 }
 
 .Hero::before {
-    content: "";
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 67%;
-    position: absolute;
-    background: linear-gradient(90deg, #000000 -14.3%, rgba(0, 0, 0, 0.74) 41.8%, rgba(0, 0, 0, 0.21) 100.18%);
-    z-index: 0;
+    display: none;
 }
+
+.Hero .container a {
+    margin: 40px 0px;
+}
+
 
 .Hero .container a {
     margin: 40px 0px;
