@@ -3473,10 +3473,16 @@ footer .copyright p {
     left: 0px;
     background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.6) 39.58%, rgba(0, 0, 0, 0.35) 100%);
 }
-.SubPage-Hero3 h3 {
+.SubPage-Hero3 h1 {
     color: #FFF;
     opacity: 0.99;
 
+}
+.SubPage-Hero3 p {
+    color: #FFF;
+    margin-top: 15px;
+    max-width: 730px;
+    opacity: 0.99;
 }
 @media (max-width: 768px) {
     .SubPage-Hero {
