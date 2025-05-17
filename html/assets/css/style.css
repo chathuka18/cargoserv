@@ -331,25 +331,45 @@ aside li {
 /* End of 1.1. Header section */
 /* 1.2. Hero section */
 .Hero {
-    background: url('../images/bg/2.png'), #F7F8FF;
-    background-size: 100% 67%;
-    background-repeat: no-repeat;
-    background-position: top center;
-    padding: 160px 0px 100px;
-    overflow-x: hidden;
     position: relative;
+    padding: 160px 0px 100px;
+    overflow: hidden;
+    color: #FFF;
+}
+
+.hero-video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-video-bg video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #000000 -14.3%, rgba(0, 0, 0, 0.74) 41.8%, rgba(0, 0, 0, 0.21) 100.18%);
+    z-index: 1;
 }
 
 .Hero::before {
-    content: "";
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 67%;
-    position: absolute;
-    background: linear-gradient(90deg, #000000 -14.3%, rgba(0, 0, 0, 0.74) 41.8%, rgba(0, 0, 0, 0.21) 100.18%);
-    z-index: 0;
+    display: none;
 }
+
+.Hero .container a {
+    margin: 40px 0px;
+}
+
 
 .Hero .container a {
     margin: 40px 0px;
@@ -3456,9 +3476,174 @@ footer .copyright p {
     max-width: 730px;
     opacity: 0.99;
 }
+.SubPage-Hero3 {
+    background: url("../images/bg/distribution.png");
+    background-position: 80% 100%;
+    position: relative;
+    padding: 100px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.SubPage-Hero3::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.6) 39.58%, rgba(0, 0, 0, 0.35) 100%);
+}
+.SubPage-Hero3 h1 {
+    color: #FFF;
+    opacity: 0.99;
 
+}
+.SubPage-Hero3 p {
+    color: #FFF;
+    margin-top: 15px;
+    max-width: 730px;
+    opacity: 0.99;
+}
+.SubPage-Hero4 {
+    background: url("../images/bg/FreightForwarding.png");
+    background-position: 80% 100%;
+    position: relative;
+    padding: 100px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.SubPage-Hero4::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.6) 39.58%, rgba(0, 0, 0, 0.35) 100%);
+}
+.SubPage-Hero4 h1 {
+    color: #FFF;
+    opacity: 0.99;
 
+}
+.SubPage-Hero4 p {
+    color: #FFF;
+    margin-top: 15px;
+    max-width: 730px;
+    opacity: 0.99;
+}
+.SubPage-Hero5 {
+    background: url("../images/bg/Custom House.png");
+    background-position: 80% 100%;
+    position: relative;
+    padding: 100px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.SubPage-Hero5::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.6) 39.58%, rgba(0, 0, 0, 0.35) 100%);
+}
+.SubPage-Hero5 h1 {
+    color: #FFF;
+    opacity: 0.99;
 
+}
+.SubPage-Hero5 p {
+    color: #FFF;
+    margin-top: 15px;
+    max-width: 730px;
+    opacity: 0.99;
+}
+.SubPage-Hero6 {
+    background: url("../images/bg/project cargo banner.png");
+    background-position: 80% 100%;
+    position: relative;
+    padding: 100px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.SubPage-Hero6::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.6) 39.58%, rgba(0, 0, 0, 0.35) 100%);
+}
+.SubPage-Hero6 h1 {
+    color: #FFF;
+    opacity: 0.99;
+
+}
+.SubPage-Hero6 p {
+    color: #FFF;
+    margin-top: 15px;
+    max-width: 730px;
+    opacity: 0.99;
+}
+.SubPage-Hero7 {
+    background: url("../images/bg/3pl.png");
+    background-position: 80% 100%;
+    position: relative;
+    padding: 100px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.SubPage-Hero7::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.6) 39.58%, rgba(0, 0, 0, 0.35) 100%);
+}
+.SubPage-Hero7 h1 {
+    color: #FFF;
+    opacity: 0.99;
+
+}
+.SubPage-Hero7 p {
+    color: #FFF;
+    margin-top: 15px;
+    max-width: 730px;
+    opacity: 0.99;
+}
+.SubPage-Hero8 {
+    background: url("../images/bg/Inland Transportation.png");
+    background-position: 80% 100%;
+    position: relative;
+    padding: 100px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.SubPage-Hero8::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.6) 39.58%, rgba(0, 0, 0, 0.35) 100%);
+}
+.SubPage-Hero8 h1 {
+    color: #FFF;
+    opacity: 0.99;
+
+}
+.SubPage-Hero8 p {
+    color: #FFF;
+    margin-top: 15px;
+    max-width: 730px;
+    opacity: 0.99;
+}
 @media (max-width: 768px) {
     .SubPage-Hero {
         padding: 70px 0px;
@@ -4211,53 +4396,91 @@ footer .copyright p {
 /* End of 4.1. Feedback section */
 
 
-/* 6.1. Details section */
-.Details {
-    padding: 100px 0px;
+/* Carbon Section */
+.carbon-section {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background-color: #E6F4EA;
+  border-radius: 12px;
+  border-left: 6px solid #2E7D32;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
-.Details figure {
-    border-radius: 40px;
-    overflow: hidden;
+/* Image Container */
+.carbon-image-container {
+  flex: 1;
+  max-width: 45%;
 }
 
-.Details img {
-    width: 100%;
+.carbon-img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
-.Details p {
-    color: #3E3F41;
-    padding-inline-start: 30px;
-    padding-inline-end: 70px;
+/* Content */
+.carbon-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.Details .position-relative::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: linear-gradient(to right, #FFFFFF00 50%, #FFFFFF80 70%, #FFF 80%);
+.carbon-content h2 {
+  color: #2E7D32;
+  font-size: 24px;
+  font-weight: bold;
 }
 
+.carbon-content p {
+  font-size: 18px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.carbon-box {
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.carbon-box.light {
+  background-color: #C8E6C9;
+}
+
+.carbon-box.dark {
+  background-color: #A5D6A7;
+}
+
+.carbon-box h4 {
+  color: #2E7D32;
+  font-size: 18px;
+}
+
+.carbon-box p {
+  font-size: 18px;
+  color: #333;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .Details {
-        padding: 70px 0px;
-    }
+  .carbon-section {
+    flex-direction: column;
+  }
 
-    .Details p {
-        padding: 0px;
-    }
+  .carbon-image-container,
+  .carbon-content {
+    max-width: 100%;
+  }
+
+  .carbon-img {
+    max-height: 250px;
+  }
 }
-
-@media (max-width: 480px) {
-    .Details {
-        padding: 50px 0px;
-    }
-}
-
-/* End of 6.1. Details section */
 
 
 /* 6.2. Reply section */
@@ -4271,6 +4494,44 @@ footer .copyright p {
     color: #3E3F41;
 }
 
+/* Two-column layout */
+.carbon-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.carbon-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.carbon-image-column {
+    flex: 1;
+    min-width: 300px;
+}
+
+.carbon-content-column {
+    flex: 2;
+    min-width: 300px;
+}
+
+.carbon-image-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.carbon-img {
+    width: 100%;   /* Fills the left column */
+    height: auto;  /* Maintains aspect ratio */
+    max-height: 500px; /* Prevents overly tall images */
+}
+
+/* Rest of your existing styles */
 .Reply form {
     padding: 40px 0px 0px;
 }
@@ -4323,6 +4584,10 @@ footer .copyright p {
     .Reply input {
         width: 100%;
     }
+    
+    .carbon-columns {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 480px) {
@@ -4330,8 +4595,12 @@ footer .copyright p {
         padding-top: 30px;
         padding-bottom: 50px;
     }
+    
+    .carbon-image-column,
+    .carbon-content-column {
+        min-width: 100%;
+    }
 }
-
 /* End of 6.2. Reply section */
 
 

@@ -34,13 +34,13 @@
                 <!-- Main Navbar -->
                 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-        <a class="nav-logo" href="index.html">
+        <a class="nav-logo" href="home.html">
             <figure><img src="assets/images/logo1.png" alt="logo"></figure>
         </a>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" href="index.html">Home</a>
+                    <a class="nav-link active" href="home.html">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="About.html">About Us</a>
@@ -64,7 +64,7 @@
                 <li class="dropdown">
                     <a class="nav-link" href="#">Pages <i class="fa-sharp fa-solid fa-sort-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="Blog.html">Our Blog</a></li>
+                        <li><a class="dropdown-item" href="Blog.html">Our Projects</a></li>
                         <li><a class="dropdown-item" href="Faq.html">FAQs</a></li>
                     </ul>
                 </li>
@@ -91,13 +91,13 @@
                     <div id="sideNav">
         <div class="d-flex nav-logo">
             <figure class="navbar-brand">
-                <a href="index.html"><img src="assets/images/logo1.png" alt="logo"></a>
+                <a href="home.html"><img src="assets/images/logo1.png" alt="logo"></a>
             </figure>
             <button class="fa-solid fa-xmark" onclick="close_aside()" aria-label="closeSide"></button>
         </div>
         <ul>
             <li class="nav-item">
-                <a class="active" aria-current="page" href="index.html">Home</a>
+                <a class="active" aria-current="page" href="home.html">Home</a>
             </li>
             <li class="nav-item">
                 <a href="About.html">About Us</a>
@@ -134,7 +134,7 @@
                     <i class="fa-solid fa-caret-down ps-2"></i>
                 </div>
                 <ul id="slid-drop">
-                    <li><a href="Blog.html">Our Blog</a></li>
+                    <li><a href="Blog.html">Our Projects</a></li>
                     <li><a href="Faq.html">FAQs</a></li>
                 </ul>
             </li>
@@ -221,53 +221,52 @@
     </div>
 </div>
 <br><br>
-
         <!-- End of 6.1. Details section -->
-        <!-- 6.1. Reply section with two columns -->
-<div style="display: flex; gap: 20px; padding: 20px; background-color: #E6F4EA; border-radius: 12px; border-left: 6px solid #2E7D32;">
-  
-  <!-- Left column: Image -->
-  <div style="flex: 1;">
-    <img src="assets/images/carbon/carbon-saving1.jpg" alt="Carbon Saving"
-     style="width: 100%; max-width: 500px; height: auto; object-fit: cover; border-radius: 12px;">
 
-  </div>
-  
-  <!-- Right column: Content -->
-  <div style="flex: 1; display: flex; flex-direction: column;">
-    <h2 style="color: #2E7D32; font-size: 24px; font-weight: bold;">Carbon Emission Savings - Results</h2>
+  <!-- 6.1. Reply section with two columns -->
+<div class="carbon-section">
+  <div class="carbon-columns">
+    <!-- Left column: Image -->
+    <div class="carbon-image-column">
+      <div class="carbon-image-container">
+        <img src="assets/images/carbon/carbon-saving1.jpg" alt="Carbon Saving" class="carbon-img">
+      </div>
+    </div>
     
-    <p style="font-size: 18px; color: #333; margin-top: 10px;">
-      The calculations show a significant reduction in carbon emissions by switching from road to rail transport.
-    </p>
+    <!-- Right column: Content -->
+    <div class="carbon-content-column">
+      <div class="carbon-content">
+        <h2>Carbon Emission Savings - Results</h2>
+        
+        <p>
+          The calculations show a significant reduction in carbon emissions by switching from road to rail transport.
+        </p>
 
-    <div style="background-color: #C8E6C9; padding: 15px; border-radius: 8px; margin-top: 10px;">
-      <h4 style="color: #2E7D32; font-size: 18px;">1. Current Road Transport Emissions:</h4>
-      <p style="font-size: 18px; color: #333;">
-        <strong>191,813,720 kg CO₂</strong> (or approximately <strong>191,814 tonnes CO₂</strong>) per month.
-      </p>
+        <div class="carbon-box light">
+          <h4>1. Current Road Transport Emissions:</h4>
+          <p><strong>191,813,720 kg CO₂</strong> (or approximately <strong>191,814 tonnes CO₂</strong>) per month.</p>
+        </div>
+
+        <div class="carbon-box light">
+          <h4>2. Planned Rail Transport Emissions:</h4>
+          <p><strong>1,858,852.8 kg CO₂</strong> (or approximately <strong>1,859 tonnes CO₂</strong>) per month.</p>
+        </div>
+
+        <div class="carbon-box dark">
+          <h4>3. Carbon Savings:</h4>
+          <p><strong>189,954,867.2 kg CO₂</strong> (or approximately <strong>189,955 tonnes CO₂</strong>) per month.</p>
+        </div>
+
+        <p>
+          By switching to rail transport, you would save nearly <strong>190,000 tonnes of CO₂ emissions per month</strong>, 
+          making a substantial impact in reducing your carbon footprint.
+        </p>
+      </div>
     </div>
-
-    <div style="background-color: #C8E6C9; padding: 15px; border-radius: 8px; margin-top: 10px;">
-      <h4 style="color: #2E7D32; font-size: 18px;">2. Planned Rail Transport Emissions:</h4>
-      <p style="font-size: 18px; color: #333;">
-        <strong>1,858,852.8 kg CO₂</strong> (or approximately <strong>1,859 tonnes CO₂</strong>) per month.
-      </p>
-    </div>
-
-    <div style="background-color: #A5D6A7; padding: 15px; border-radius: 8px; margin-top: 10px;">
-      <h4 style="color: #2E7D32; font-size: 18px;">3. Carbon Savings:</h4>
-      <p style="font-size: 18px; color: #333;">
-        <strong>189,954,867.2 kg CO₂</strong> (or approximately <strong>189,955 tonnes CO₂</strong>) per month.
-      </p>
-    </div>
-
-    <p style="font-size: 18px; color: #333; margin-top: 20px;">
-      By switching to rail transport, you would save nearly <strong>190,000 tonnes of CO₂ emissions per month</strong>, 
-      making a substantial impact in reducing your carbon footprint.
-    </p>
   </div>
 </div>
+<!-- End 6.1. Reply section with two columns -->
+
 
         <section class="carbon-calculator" style="font-family: 'Segoe UI', sans-serif; background: #f9fbfc; padding: 60px 20px;">
   <div style="max-width: 900px; margin: auto; background: #ffffff; padding: 40px; border-radius: 20px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); text-align: center;">
@@ -344,7 +343,7 @@
                         <div class="col-lg-8 col-md-7">
                             <div class="content">
                                 <h3>Subscribe Our News Letter</h3>
-                                <h2>Coverage That Protect Your World!</h2>
+                                <h2>Get in Touch, Stay Updated!</h2>
                                 <form>
                                     <div>
                                         <input type="email" name="subscribeMail" placeholder="Type Your Email" required>
@@ -378,7 +377,7 @@
                     <div class="d-flex flex-column gap-4 justify-content-between">
                         <div class="d-flex align-items-center flex-column gap-5">
                             <div>
-                                <figure><a href="index.html"><img src="assets/images/logo2.png" alt="logo"></a></figure>
+                                <figure><a href="home.html"><img src="assets/images/logo2.png" alt="logo"></a></figure>
                             </div>
                             <div class="social d-flex">
                                 <a href="https://www.facebook.com/profile.php?id=61569230769175" target="_blank" rel="noopener noreferrer">
@@ -433,7 +432,7 @@
                     <hr>
                     <div>
                         <ul class="d-flex m-0">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="home.html">Home</a></li>
                             <li><a href="About.html">About Us</a></li>
                             <li><a href="Services.html">Services</a></li>
                             <li><a href="Team.html">Team</a></li>
