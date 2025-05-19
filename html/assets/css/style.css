@@ -634,7 +634,7 @@ aside li {
 
     .project-banner {
         background: url('assets/images/project-banner.jpg') no-repeat center center/cover;
-        color: white;
+        color: rgb(0, 0, 0);
         text-align: center;
         padding: 100px 20px;
     }
@@ -4063,7 +4063,17 @@ footer .copyright p {
     margin: 0;
 }
 
+.Abou .CompaniesSlider {
+    width: 90%;
+    max-width: 1120px;
+    margin: auto;
+}
 
+.About .CompaniesSlider img {
+    width: 160px;
+    opacity: 0.5;
+    margin: 0px auto;
+}
 
 @media (max-width: 991px) {
 
@@ -4077,6 +4087,9 @@ footer .copyright p {
     .Values {
         top: 70px;
         padding-top: 0px;
+    }
+    .About .CompaniesSlider img {
+        width: 160px;
     }
 }
 
@@ -4107,6 +4120,9 @@ footer .copyright p {
 
     .Values p {
         width: 100%;
+    }
+    .About .CompaniesSlider img {
+        width: 140px;
     }
 }
 
