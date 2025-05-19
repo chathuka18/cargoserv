@@ -4595,44 +4595,91 @@ footer .copyright p {
     color: #3E3F41;
 }
 
-/* Two-column layout */
+/* Two-column layout styled like Carbon Section */
 .carbon-section {
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: #E6F4EA;
+    border-radius: 12px;
+    border-left: 6px solid #2E7D32;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    align-items: flex-start;
 }
 
 .carbon-columns {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
     gap: 30px;
 }
 
 .carbon-image-column {
     flex: 1;
-    min-width: 300px;
-}
-
-.carbon-content-column {
-    flex: 2;
-    min-width: 300px;
+    max-width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .carbon-image-container {
     width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
 }
 
 .carbon-img {
-    width: 100%;   /* Fills the left column */
-    height: auto;  /* Maintains aspect ratio */
-    max-height: 500px; /* Prevents overly tall images */
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
 }
 
-/* Rest of your existing styles */
+.carbon-content-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.carbon-content h2 {
+    color: #2E7D32;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.carbon-content p {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.carbon-box {
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.carbon-box.light {
+    background-color: #C8E6C9;
+}
+
+.carbon-box.dark {
+    background-color: #A5D6A7;
+}
+
+.carbon-box h4 {
+    color: #2E7D32;
+    font-size: 18px;
+}
+
+.carbon-box p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Form styles */
 .Reply form {
     padding: 40px 0px 0px;
 }
@@ -4676,6 +4723,7 @@ footer .copyright p {
     margin: 7px 0px;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .Reply {
         padding-bottom: 70px;
@@ -4685,9 +4733,19 @@ footer .copyright p {
     .Reply input {
         width: 100%;
     }
-    
+
+    .carbon-section,
     .carbon-columns {
         flex-direction: column;
+    }
+
+    .carbon-image-column,
+    .carbon-content-column {
+        max-width: 100%;
+    }
+
+    .carbon-img {
+        max-height: 250px;
     }
 }
 
@@ -4696,13 +4754,8 @@ footer .copyright p {
         padding-top: 30px;
         padding-bottom: 50px;
     }
-    
-    .carbon-image-column,
-    .carbon-content-column {
-        min-width: 100%;
-    }
 }
-/* End of 6.2. Reply section */
+
 
 
 /* 10.1. Past-studies section */
