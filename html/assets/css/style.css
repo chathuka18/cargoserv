@@ -2916,8 +2916,8 @@ aside li {
 
 /* Image Styling */
 .post img {
-    width: 100% !important;
-    height: 100% !important;      /* Forcefully double the height */
+    width: 75% !important;
+    height: 75% !important;      /* Forcefully double the height */
     object-fit: cover !important;
     border-radius: 8px;
     margin-bottom: 10px;
