@@ -682,27 +682,24 @@
         </section>
         <!-- End of 1.13. Questions section -->
 
-        <!-- 1.14. News section -->
-        <section class="News bg-gray-100 py-10">
-            <div class="container mx-auto px-4">
-                <h4 class="text-2xl font-semibold text-gray-800 text-center mb-6">Latest News</h4>
-        
-                <div class="relative overflow-hidden">
-                    <div class="carousel-container flex items-center justify-center max-h-[250px] overflow-hidden">
-                        <div class="carousel flex gap-4 transition-transform duration-500 ease-in-out" id="carousel">
-                            <!-- Posts will be injected here -->
-                        </div>
-                    </div>
-        
-                    <!-- Navigation Buttons -->
-                    <div class="flex justify-between mt-4">
-                        <button id="prevBtn" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400 disabled:opacity-50" disabled>&lt;</button>
-                        <button id="nextBtn" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400">&gt;</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+<!-- 1.14. News section -->
+<section class="News bg-gray-100 py-10">
+    <div class="container mx-auto px-4">
+      <h4 class="text-2xl font-semibold text-gray-800 text-center mb-6">Latest News</h4>
+      <div class="relative overflow-hidden">
+        <div class="carousel-container flex items-center justify-center" style="height: 600px;"> <!-- Adjust container height -->
+          <div class="carousel flex gap-4 transition-transform duration-500 ease-in-out" id="carousel" style="height: 600px;">
+            <!-- Posts will be injected here -->
+          </div>
+        </div>
+        <!-- Navigation Buttons -->
+        <div class="flex justify-between mt-4" style="max-width: 3400px; margin: auto;">
+          <button id="prevBtn" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400 disabled:opacity-50" disabled>&lt;</button>
+          <button id="nextBtn" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400">&gt;</button>
+        </div>
+      </div>
+    </div>
+  </section>
         <!-- End of 1.14. News section -->
 
                 <!-- 1.15. Subscribe section -->
@@ -866,109 +863,106 @@
     <!-- animation from javascript -->
     <script src="assets/js/aos.js"></script>
     
-    
     <script>
         const accessToken = "EAAN8sJZAFLZAMBOZCYOKAFcnSaphYJ1DcX1b4uEu7qZBribia1dvMlycTZCyTMyAO4xLrRaCE897F5YnBcBhJ303fcxbJONZCXZC0GcrxOcqaJDd97vEzMz7tvdD3oD7bdc4pHvWZA0AXF4aZCyitdA9ooCcfuSAjDJ93nC2f1oLxd0MSwTSlVhf0tsO7FiWSfQMVQPNcRNWg";
         const url = "https://graph.facebook.com/v15.0/457763814094558/posts?fields=id,message,created_time,attachments{media}&access_token=" + accessToken;
-    
+      
         let currentIndex = 0;
-        let postsPerView = 1; // Show one post at a time on mobile
-        let posts = []; // Array to store fetched posts
-    
+        let postsPerView = 1;
+        let posts = [];
+      
         async function fetchPosts() {
-            try {
-                const response = await fetch(url);
-                if (!response.ok) throw new Error("Failed to fetch posts");
-    
-                const data = await response.json();
-                posts = data.data.slice(0, 10); // Get the latest 10 posts
-    
-                const carousel = document.getElementById("carousel");
-                carousel.innerHTML = ""; // Clear previous posts
-    
-                posts.forEach(post => {
-                    const postElement = document.createElement("div");
-                    postElement.className = "post w-full flex-shrink-0"; // Ensure responsiveness and add width
-    
-                    const message = post.message || "No message available";
-                    const createdTime = new Date(post.created_time).toLocaleString();
-    
-                    let mediaHTML = "";
-                    if (post.attachments && post.attachments.data) {
-                        post.attachments.data.forEach(attachment => {
-                            if (attachment.media && attachment.media.image) {
-                                mediaHTML = `<img class="w-full h-[200px] object-cover rounded-lg" src="${attachment.media.image.src}" alt="Post image">`;
-                            }
-                        });
-                    }
-    
-                    postElement.innerHTML = `
-                        ${mediaHTML}
-                        <div class="message text-sm text-gray-700 mt-2">${message}</div>
-                        <div class="created-time text-xs text-gray-500">Posted on: ${createdTime}</div>
-                    `;
-    
-                    // Redirect to Facebook post on click
-                    postElement.addEventListener("click", () => {
-                        window.open(`https://www.facebook.com/${post.id}`, "_blank");
-                    });
-    
-                    carousel.appendChild(postElement);
-                });
-    
-                setupCarousel(posts.length);
-            } catch (error) {
-                console.error("Error fetching posts:", error.message);
-            }
-        }
-    
-        function setupCarousel(totalPosts) {
+          try {
+            const response = await fetch(url);
+            if (!response.ok) throw new Error("Failed to fetch posts");
+      
+            const data = await response.json();
+            posts = data.data.filter(post => {
+              if (post.attachments && post.attachments.data) {
+                return post.attachments.data.some(attachment => attachment.media && attachment.media.image);
+              }
+              return false;
+            }).slice(0, 10);
+      
             const carousel = document.getElementById("carousel");
-            const prevBtn = document.getElementById("prevBtn");
-            const nextBtn = document.getElementById("nextBtn");
-    
-            function updateButtons() {
-                prevBtn.disabled = currentIndex === 0;
-                nextBtn.disabled = currentIndex >= totalPosts - postsPerView;
-            }
-    
-            function moveCarousel() {
-                carousel.style.transform = `translateX(-${currentIndex * (100 / postsPerView)}%)`;
-                updateButtons();
-            }
-    
-            function autoMoveCarousel() {
-                setInterval(() => {
-                    if (currentIndex < totalPosts - 1) {
-                        currentIndex++; // Move to the next post
-                    } else {
-                        currentIndex = 0; // Reset to the first post after reaching the last
-                    }
-                    moveCarousel();
-                }, 15000); // Adjust the interval time as needed (3000ms = 3 seconds)
-            }
-    
-            prevBtn.addEventListener("click", () => {
-                if (currentIndex > 0) {
-                    currentIndex--;
-                    moveCarousel();
+            carousel.innerHTML = "";
+      
+            posts.forEach(post => {
+              let imageSrc = "";
+              if (post.attachments && post.attachments.data) {
+                for (const attachment of post.attachments.data) {
+                  if (attachment.media && attachment.media.image) {
+                    imageSrc = attachment.media.image.src;
+                    break;
+                  }
                 }
+              }
+      
+              if (imageSrc) {
+                const postElement = document.createElement("div");
+                postElement.className = "post w-full flex-shrink-0";
+                postElement.innerHTML = `
+                  <img class="w-full h-[32rem] object-cover rounded-lg shadow-md cursor-pointer" src="${imageSrc}" alt="Facebook post image">
+                `;
+                postElement.addEventListener("click", () => {
+                  window.open(`https://www.facebook.com/${post.id}`, "_blank");
+                });
+                carousel.appendChild(postElement);
+              }
             });
-    
-            nextBtn.addEventListener("click", () => {
-                if (currentIndex < totalPosts - 1) {
-                    currentIndex++;
-                    moveCarousel();
-                }
-            });
-    
-            updateButtons();
-            autoMoveCarousel(); // Start the auto-move loop
+      
+            setupCarousel(document.querySelectorAll("#carousel .post").length);
+          } catch (error) {
+            console.error("Error fetching posts:", error.message);
+          }
         }
-    
-        // Initial fetch
+      
+        function setupCarousel(totalPosts) {
+          const carousel = document.getElementById("carousel");
+          const prevBtn = document.getElementById("prevBtn");
+          const nextBtn = document.getElementById("nextBtn");
+      
+          function updateButtons() {
+            prevBtn.disabled = currentIndex === 0;
+            nextBtn.disabled = currentIndex >= totalPosts - postsPerView;
+          }
+      
+          function moveCarousel() {
+            carousel.style.transform = `translateX(-${currentIndex * (100 / postsPerView)}%)`;
+            updateButtons();
+          }
+      
+          function autoMoveCarousel() {
+            setInterval(() => {
+              if (currentIndex < totalPosts - 1) {
+                currentIndex++;
+              } else {
+                currentIndex = 0;
+              }
+              moveCarousel();
+            }, 15000);
+          }
+      
+          prevBtn.addEventListener("click", () => {
+            if (currentIndex > 0) {
+              currentIndex--;
+              moveCarousel();
+            }
+          });
+      
+          nextBtn.addEventListener("click", () => {
+            if (currentIndex < totalPosts - 1) {
+              currentIndex++;
+              moveCarousel();
+            }
+          });
+      
+          updateButtons();
+          autoMoveCarousel();
+        }
+      
         fetchPosts();
-    </script>
+      </script>
     
     
     <script>

@@ -2742,7 +2742,6 @@ aside li {
 
 /* End of 1.13. Questions section */
 
-
 /* 1.14. News section */
 .About-News,
 .Blog-News {
@@ -2864,7 +2863,6 @@ aside li {
 
 /* FB posts */
 /* Follow Us Section */
-
 .follow-us {
     display: flex;
     align-items: center;
@@ -2892,7 +2890,7 @@ aside li {
 
 /* Carousel Container */
 .carousel-container {
-    max-width: 900px;
+    max-width: 1200px; /* Increased from 900px */
     margin: 20px auto;
     overflow: hidden;
     position: relative;
@@ -2909,8 +2907,8 @@ aside li {
 
 /* Individual Post */
 .post {
-    flex: 0 0 33.333%;
-    max-width: 33.333%;
+    flex: 0 0 50%;          /* Show 2 posts per view */
+    max-width: 50%;
     box-sizing: border-box;
     padding: 15px;
     text-align: center;
@@ -2918,13 +2916,14 @@ aside li {
 
 /* Image Styling */
 .post img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100% !important;
+    height: 100% !important;      /* Forcefully double the height */
+    object-fit: cover !important;
     border-radius: 8px;
     margin-bottom: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 /* Hover Effect */
 .post:hover img {
@@ -2934,7 +2933,7 @@ aside li {
 
 /* Message Text */
 .post .message {
-    font-size: 14px;
+    font-size: 16px; /* Slightly larger text */
     line-height: 1.5;
     color: #333;
 }
@@ -2980,7 +2979,6 @@ aside li {
     opacity: 0.3;
     cursor: not-allowed;
 }
-
 
 /* Posts */
 
