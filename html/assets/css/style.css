@@ -499,6 +499,7 @@ aside li {
     transform: translateX(4px);
 }
 
+
 @keyframes incScale {
     From {
         transform: scale(1);
@@ -2428,6 +2429,7 @@ aside li {
     top: -3px;
 }
 
+
 @keyframes pulse-border {
     0% {
         transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
@@ -2535,7 +2537,6 @@ aside li {
 }
 
 /* End of 1.12. Guide section */
-
 
 /* 1.13. Questions section */
 .Questions {
