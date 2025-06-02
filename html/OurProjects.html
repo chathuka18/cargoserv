@@ -24,7 +24,64 @@
     <!-- animation of css -->
     <link rel="stylesheet" href="assets/css/aos.css">
 </head>
-
+ <style>
+        .article-section {
+            padding: 60px 20px;
+            background-color: #f9f9f9;
+        }
+        .article-section h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .article-section h2 {
+            font-size: 24px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .article-section p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .gallery-wrapper {
+            margin: 40px 0;
+        }
+        .gallery-container {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .gallery-container img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .video-banner {
+            text-align: center;
+            padding: 30px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+        .video-banner h2 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        .video-banner a {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .video-banner a:hover {
+            background-color: #0056b3;
+        }
+    </style>
 <body>
     <div class="site-wrapper">
         <!-- 1.1. Header section -->
@@ -44,9 +101,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="About.html">About Us</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="ReducingCarbonFootprint.html">Reducing Carbon Footprint</a>
-                </li>
+                
 
                 <li class="dropdown">
                     <a class="nav-link" href="Services.html">Services <i class="fa-sharp fa-solid fa-sort-down"></i></a>
@@ -56,8 +111,11 @@
                         <li><a class="dropdown-item" href="CustomHouseBrokerage.html">Custom House Brokerage</a></li>
                         <li><a class="dropdown-item" href="ProjectCargo.html">Project Cargo Handling</a></li>
                         <li><a class="dropdown-item" href="3PL.html">3PL Services</a></li>
-                        <li><a class="dropdown-item" href="InlandTransport.html">Inland Transportation Services</a></li>
+                        <li><a class="dropdown-item" href="DomesticTranspotation.html">Domestic Transportation</a></li>
                     </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Sustainability.html">Sustainability</a>
                 </li>
 
                 <li class="dropdown">
@@ -77,7 +135,7 @@
             </ul>
         </div>
         <div>
-            <a href="Contact.html" class="hover1">Get a Inquiry</a>
+            <a href="Contact.html" class="hover1">Get a Court</a>
         </div>
         <button onclick="open_aside()" type="button" aria-label="openSide">
             <i class="fa-solid fa-bars"></i>
@@ -101,9 +159,7 @@
             <li class="nav-item">
                 <a href="About.html">About Us</a>
             </li>
-            <li class="nav-item">
-                <a href="ReducingCarbonFootprint.html">Reducing Carbon Footprint</a>
-            </li>
+           
 
             <li class="nav-item">
                 <div id="slid-btn">
@@ -116,8 +172,11 @@
                     <li><a href="Customs House Brokerage.html">Customs House Brokerage</a></li>
                     <li><a href="ProjectCargo.html">Project Cargo Handling</a></li>
                     <li><a href="3PL.html">3PL Services</a></li>
-                    <li><a href="InlandTransport.html">Inland Transportation Services</a></li>
+                    <li><a href="DomesticTranspotation.html">Domestic Transportation</a></li>
                 </ul>
+            </li>
+             <li class="nav-item">
+                <a href="Sustainability.html">Sustainability</a>
             </li>
 
             <li class="nav-item">
@@ -144,40 +203,80 @@
         </header>
         <!-- End of 1.1. Header section -->
 
-        <!-- 2.1. SubPage-Hero section -->
-        <section class="SubPage-Hero9">
-            <div class="container" data-aos="fade-down">
-                <h1>Our Projects</h1>
-                <p>At Cargoserv, our completed projects reflect our dedication, innovation, and ability to deliver impactful solutions.</p>
-            </div>
-        </section>
-        <!-- End of 2.1. SubPage-Hero section -->
-
         <!-- 1.14. News section -->
-        <section class="News Blog-News">
-            <div class="container">
-                <h4>Latest Projects</h4>
-                <h2 class="my-2">Our Projects And Success Stories </h2>
-                <p>Discover how we've brought ambitious ideas to life through our diverse range of successful projects. Each story highlights our commitment to excellence, innovation, and delivering results that make a real difference for our partners and communities.
-                </p>
-                <div class="row">
-                    <div class="col-sm-6 col-md-4 mt-4 mt-md-0 px-lg-3">
-                        <figure data-aos="flip-left">
-                            <div class="d-flex">
-                               
-                                <h5><a class="text-dark" href="BlogDetails.html">Lion Brewery Sustainability Warehouse</a></h5>
-                                <p>Innovating with Purpose – A Greener Future Built in 120 Days</p>
-                                <div><a href="Project1.html"><i class="fa-solid fa-arrow-right"></i> Read More</a>
-                                </div>
-                            </div>
-                            <img src="assets/images/Blog/project 1.png" alt="NewsSection1">
-                        </figure>
+<section class="News Blog-News">
+    <div class="container">
+        <h4>Latest Projects</h4>
+        <h2 class="my-2">Our Projects And Success Stories</h2>
+        <p>
+            Discover how we've brought ambitious ideas to life through our diverse range of successful projects. 
+            Each story highlights our commitment to excellence, innovation, and delivering results that make a real difference 
+            for our partners and communities.
+        </p>
+
+        <div class="row">
+            <!-- Project 1 -->
+            <div class="col-sm-6 col-md-4 mt-4 mt-md-0 px-lg-3">
+                <figure data-aos="flip-left">
+                    <div class="d-flex flex-column">
+                        <h5><a class="text-dark" href="BlogDetails.html">Lion Brewery Sustainability Warehouse</a></h5>
+                        <p>Innovating with Purpose – A Greener Future Built in 120 Days</p>
+                        <div><a href="Project1.html"><i class="fa-solid fa-arrow-right"></i> Read More</a></div>
                     </div>
-                    
-                </div>
+                    <img src="assets/images/Blog/project 1.png" alt="NewsSection1">
+                </figure>
             </div>
-        </section>
-        <!-- End of 1.14. News section -->
+
+            <!-- Project 2 -->
+            <div class="col-sm-6 col-md-4 mt-4 mt-md-0 px-lg-3">
+                <figure data-aos="flip-left">
+                    <div class="d-flex flex-column">
+                        <h5><a class="text-dark" href="BlogDetails.html">Ceyline Logistics Cold Storage Facility</a></h5>
+                        <p>Enhancing Food Safety – Advanced Cold Chain Infrastructure in 150 Days</p>
+                        <div><a href="Project2.html"><i class="fa-solid fa-arrow-right"></i> Read More</a></div>
+                    </div>
+                    <img src="assets/images/Blog/project 2.png" alt="NewsSection2">
+                </figure>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="col-sm-6 col-md-4 mt-4 mt-md-0 px-lg-3">
+                <figure data-aos="flip-left">
+                    <div class="d-flex flex-column">
+                        <h5><a class="text-dark" href="BlogDetails.html">Cross-Border Logistics Expansion</a></h5>
+                        <p>Sustainable Logistics – Reducing Carbon Emissions with Smart Design</p>
+                        <div><a href="Project3.html"><i class="fa-solid fa-arrow-right"></i> Read More</a></div>
+                    </div>
+                    <img src="assets/images/Blog/project 3.png" alt="NewsSection3">
+                </figure>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="col-sm-6 col-md-4 mt-4 mt-md-0 px-lg-3">
+                <figure data-aos="flip-left">
+                    <div class="d-flex flex-column">
+                        <h5><a class="text-dark" href="BlogDetails.html">Renewable Energy Distribution Center</a></h5>
+                        <p>Powered by Nature – Solar-Powered Operations for a Greener Tomorrow</p>
+                        <div><a href="Project4.html"><i class="fa-solid fa-arrow-right"></i> Read More</a></div>
+                    </div>
+                    <img src="assets/images/Blog/project 4.png" alt="NewsSection4">
+                </figure>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="col-sm-6 col-md-4 mt-4 mt-md-0 px-lg-3">
+                <figure data-aos="flip-left">
+                    <div class="d-flex flex-column">
+                        <h5><a class="text-dark" href="BlogDetails.html">Eco-Friendly Packaging Solutions</a></h5>
+                        <p>Efficiency Through Innovation – Automated Warehousing in 90 Days</p>
+                        <div><a href="Project5.html"><i class="fa-solid fa-arrow-right"></i> Read More</a></div>
+                    </div>
+                    <img src="assets/images/Blog/project 5.png" alt="NewsSection5">
+                </figure>
+            </div>
+</section>
+<!-- End of 1.14. News section -->
+
 
 
         <!-- 1.15. Subscribe section -->

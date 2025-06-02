@@ -639,6 +639,7 @@ aside li {
         text-align: center;
         padding: 100px 20px;
     }
+    
 
     .project-banner h4 {
         font-size: 20px;
@@ -2743,13 +2744,9 @@ aside li {
 
 /* End of 1.13. Questions section */
 
-/* 1.14. News section */
-.About-News,
-.Blog-News {
-    padding-top: 100px;
-}
-
+/* Main Section Padding and Alignment */
 .News {
+    padding-top: 100px;
     padding-bottom: 100px;
     text-align: center;
 }
@@ -2761,10 +2758,11 @@ aside li {
 .News h2,
 .News p {
     max-width: 520px;
-    margin: 0px auto;
+    margin: 0 auto;
     color: #3E3F41;
 }
 
+/* Grid and Card Styling */
 .News .row {
     row-gap: 30px;
     margin-top: 40px;
@@ -2772,76 +2770,61 @@ aside li {
 
 .News .row figure img {
     width: 100%;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
 }
 
 .News figure {
     border-radius: 40px;
     position: relative;
     overflow: hidden;
+    transition: box-shadow 0.3s ease;
 }
 
-.News .d-flex figure {
-    border-radius: 0px;
+.News figure:hover {
+    box-shadow: 0px 25px 40px rgba(0, 0, 0, 0.1);
 }
 
+/* Text Overlay on Hover */
 .News figure .d-flex {
     background: #FFF;
     position: absolute;
     width: 100%;
-    height: max-content;
-    bottom: 0px;
+    bottom: 0;
     flex-direction: column;
     padding: 24px 30px;
     text-align: start;
     gap: 12px;
     opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-.News figure:hover {
-    box-shadow: 0px 25px 40px 0px #0000001A;
-}
-
-.News .d-flex figure:hover {
-    box-shadow: none;
-}
-
-.News .col-md-4 :first-child:hover .d-flex {
+.News figure:hover .d-flex {
     opacity: 1;
-    transition: all 0.3s ease-in;
 }
 
 .News h5 {
     color: #3E3F41;
+    font-weight: 600;
+    margin-bottom: 6px;
 }
 
-.News figure .d-flex div {
+.News figure p {
+    font-size: 14px;
+    color: #1141BE;
+}
+
+/* Read More Link */
+.News .d-flex div {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-.News .d-flex figure img {
-    width: 40px;
-    border-radius: 50%;
-}
-
-.News .d-flex figure i,
-.News .d-flex figure p {
-    font-size: 14px;
-    font-weight: 300;
-    color: #1141BE;
-    display: inline-block;
-    padding: 0px 4px;
-}
-
-.News .d-flex figure:nth-child(2) p {
-    color: #3E3F41;
-}
-
 .News .d-flex div a {
-    transition: color 0.3s ease;
     color: #1141BE;
+    transition: color 0.3s ease;
+    font-weight: 500;
 }
 
 .News .d-flex div a:hover {
@@ -2861,128 +2844,7 @@ aside li {
     background-color: #00b3ff;
 }
 
-
-/* FB posts */
-/* Follow Us Section */
-.follow-us {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 20px 0;
-    font-size: 18px;
-    color: #1877f2;
-    text-decoration: none;
-}
-
-.follow-us img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    transition: transform 0.3s ease;
-}
-
-.follow-us:hover img {
-    transform: scale(1.1);
-}
-
-.follow-us:hover {
-    color: #145dbf;
-}
-
-/* Carousel Container */
-.carousel-container {
-    max-width: 1200px; /* Increased from 900px */
-    margin: 20px auto;
-    overflow: hidden;
-    position: relative;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Carousel */
-.carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-/* Individual Post */
-.post {
-    flex: 0 0 50%;          /* Show 2 posts per view */
-    max-width: 50%;
-    box-sizing: border-box;
-    padding: 15px;
-    text-align: center;
-}
-
-/* Image Styling */
-.post img {
-    width: 75% !important;
-    height: 75% !important;      /* Forcefully double the height */
-    object-fit: cover !important;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-
-/* Hover Effect */
-.post:hover img {
-    transform: scale(1.05);
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Message Text */
-.post .message {
-    font-size: 16px; /* Slightly larger text */
-    line-height: 1.5;
-    color: #333;
-}
-
-/* Created Time */
-.post .created-time {
-    font-size: 12px;
-    color: #777;
-    margin-top: 5px;
-}
-
-/* Carousel Navigation Buttons */
-.carousel-buttons {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    pointer-events: none;
-}
-
-.carousel-buttons button {
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    pointer-events: auto;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease;
-}
-
-.carousel-buttons button:hover {
-    background: rgba(0, 0, 0, 0.8);
-}
-
-.carousel-buttons button:disabled {
-    opacity: 0.3;
-    cursor: not-allowed;
-}
-
-/* Posts */
-
+/* Responsive Adjustments */
 @media (max-width: 991px) {
     .News figure .d-flex div {
         flex-direction: column;
@@ -2990,28 +2852,15 @@ aside li {
         gap: 8px;
     }
 
-    .News figure .d-flex h5 {
-        line-height: 18px;
-    }
-
     .News figure .d-flex p {
-        font-size: 12px;
-        line-height: 12px;
-    }
-
-    .News figure .d-flex a {
-        font-size: 12px;
+        font-size: 13px;
+        line-height: 18px;
     }
 }
 
 @media (max-width: 768px) {
-
-    .About-News,
-    .Blog-News {
-        padding-top: 70px;
-    }
-
     .News {
+        padding-top: 70px;
         padding-bottom: 70px;
     }
 
@@ -3020,16 +2869,11 @@ aside li {
     }
 
     .News figure .d-flex {
-        padding: 12px;
-        gap: 12px;
+        padding: 16px;
     }
 
     .News figure .d-flex h5 {
-        font-size: 14px !important;
-    }
-
-    .News figure .d-flex div p {
-        display: inline-block;
+        font-size: 14px;
     }
 
     .News figure .d-flex div a {
@@ -3037,18 +2881,13 @@ aside li {
     }
 
     .News .row {
-        row-gap: 10px;
+        row-gap: 20px;
     }
 }
 
 @media (max-width: 480px) {
-
-    .About-News,
-    .Blog-News {
-        padding-top: 50px;
-    }
-
     .News {
+        padding-top: 50px;
         padding-bottom: 50px;
     }
 
@@ -3062,7 +2901,6 @@ aside li {
     }
 }
 
-/* End of 1.14. News section */
 
 
 /* 1.15. pascribe section */
@@ -3656,7 +3494,7 @@ footer .copyright p {
     opacity: 0.99;
 }
 .SubPage-Hero8 {
-    background: url("../images/bg/Inland Transportation.png");
+    background: url("../images/bg/Domestic Transportation.png");
     background-position: 80% 100%;
     position: relative;
     padding: 100px 0px;
@@ -4989,13 +4827,17 @@ footer .copyright p {
     padding: 60px 10px;
     font-family: 'Segoe UI', sans-serif;
     color: #333;
-    text-align: center;
+    text-align: left;
+    max-width: 800px;  
+    margin: 0 auto 10px auto; 
+    
 }
 
 .article-section h1 {
     font-size: 2.8rem;
     font-weight: 800;
     margin-bottom: 10px;
+    
 }
 
 .article-section h2 {
@@ -5014,13 +4856,16 @@ footer .copyright p {
 }
 
 .article-highlights {
-    background-color: #fff;
-    border-left: 5px solid #007BFF;
-    padding: 20px;
-    margin: 30px auto;
+    margin-top: 20px;
+    padding: 10px;
+    text-align: left;
     max-width: 800px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.article-highlights li {
+    margin: 8px 0;
+    line-height: 1.6;
 }
 
 .article-highlights strong {
@@ -5031,6 +4876,7 @@ footer .copyright p {
 
 .features-list {
     margin-top: 20px;
+    padding: 10px;
     text-align: left;
     max-width: 800px;
     margin-left: auto;
