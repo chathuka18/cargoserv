@@ -1542,7 +1542,7 @@ aside li {
 .Quote label {
     margin-top: 16px;
     color: #3E3F41;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Gilroy';
     width: 100%;
     text-align: start;
 }
@@ -2605,7 +2605,7 @@ aside li {
     color: #3E3F41;
     font-weight: 500;
     font-size: 24px;
-    font-family: 'Akshar', sans-serif;
+    font-family: 'Gilroy';
 }
 
 .Questions .accordion-button:active,
@@ -3856,7 +3856,7 @@ footer .copyright p {
 }
 
 .Values h2 {
-  color: #3E3F41;
+  color: #fdfeff;
   font-weight: 700;
 }
 
@@ -4729,7 +4729,7 @@ footer .copyright p {
 }
 
 .Page-not-found .container span {
-    font-family: 'Akshar', sans-serif;
+    font-family: 'Gilroy';
     display: inline-block;
     font-size: 200px;
     opacity: 0;
@@ -4815,7 +4815,7 @@ footer .copyright p {
 .article-section {
     background-color: #fffffd; /* Light beach-inspired tone */
     padding: 60px 10px;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Gilroy';
     color: #333;
     text-align: left;
     max-width: 800px;  
@@ -5147,7 +5147,7 @@ section.Details .container {
             font-weight: 900;
             color: #003366;
             margin-bottom: 20px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Gilroy';
             text-transform: uppercase;
             letter-spacing: 2px;
             text-shadow: 1px 1px 3px #b3d1ff;
@@ -5157,7 +5157,7 @@ section.Details .container {
             line-height: 1.6;
             color: #0a2540;
             font-weight: 500;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Gilroy';
         }
         /* Image container */
         section.Details .content-box .image {
@@ -5196,6 +5196,7 @@ section.Details .container {
 
         .freight-forwarding-section {
   padding: 80px 0;
+  font-family: 'Gilroy';
 }
 
 .freight-row {
@@ -5216,6 +5217,7 @@ section.Details .container {
 }
 
 .freight-text h2 {
+font-family: 'Gilroy';
   font-size: 36px;
   font-weight: 700;
   color: #002147;
@@ -5223,6 +5225,7 @@ section.Details .container {
 }
 
 .freight-text p {
+    font-family: 'Gilroy';
   font-size: 18px;
   color: #444;
   line-height: 1.6;
@@ -5232,6 +5235,7 @@ section.Details .container {
 .freight-text ul {
   list-style-type: square;
   padding-left: 20px;
+  font-family: 'Gilroy';
   font-size: 17px;
   color: #333;
 }
@@ -5257,3 +5261,141 @@ section.Details .container {
   margin: 60px 0;
 }
 
+/* --- Article Summary Section --- */
+.article-summary.modern-blue {
+  max-width: 750px;
+  margin: 3rem auto;
+  padding: 2.5rem 3rem;
+  background: #e6f0ff; /* light blue background */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(38, 70, 83, 0.15);
+  font-family: 'Gilroy';
+  color: #1e3a8a; /* strong blue */
+}
+
+.article-summary.modern-blue h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: #102770;
+  text-align: center;
+  letter-spacing: 1.2px;
+}
+
+.article-summary.modern-blue h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #3b5bdb;
+  text-align: center;
+  font-style: italic;
+}
+
+.article-summary.modern-blue ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.article-summary.modern-blue ul li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 1rem;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: #274472;
+  font-weight: 500;
+}
+
+/* Custom bullet with blue dot */
+.article-summary.modern-blue ul li::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  width: 12px;
+  height: 12px;
+  background: #3b5bdb;
+  border-radius: 50%;
+}
+
+/* --- Gallery Section --- */
+.gallery-wrapper.modern-blue-gallery {
+  max-width: 1000px;
+  margin: 3rem auto 5rem;
+  overflow-x: auto;
+  padding: 1rem 1rem 2rem;
+  background: #dbe9ff;
+  border-radius: 14px;
+  box-shadow: 0 6px 15px rgba(59, 91, 219, 0.25);
+}
+
+.gallery-container {
+  display: flex;
+  gap: 15px;
+  scroll-behavior: smooth;
+}
+
+.gallery-container img {
+  flex-shrink: 0;
+  width: 250px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid #3b5bdb;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-container img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 10px 25px rgba(59, 91, 219, 0.6);
+}
+
+/* --- Video Banner Section --- */
+.video-banner.modern-blue-video {
+  max-width: 750px;
+  margin: 0 auto 5rem;
+  background: #3b5bdb;
+  padding: 2rem 3rem;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(38, 70, 83, 0.3);
+  color: white;
+  font-family: 'Gilroy';
+}
+
+.video-banner.modern-blue-video h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.video-banner.modern-blue-video a {
+  display: inline-block;
+  background: #2a47bf;
+  color: #fff;
+  padding: 0.85rem 2.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
+  box-shadow: 0 6px 15px rgba(59, 91, 219, 0.6);
+  transition: background-color 0.3s ease;
+}
+
+.video-banner.modern-blue-video a:hover {
+  background-color: #1d3696;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .article-summary.modern-blue,
+  .video-banner.modern-blue-video {
+    padding: 1.5rem 1.8rem;
+  }
+
+  .gallery-container img {
+    width: 180px;
+    height: 130px;
+  }
+}
