@@ -4999,15 +4999,14 @@ footer .copyright p {
 }
 
 .timeline-img {
-  width: 200px;
-  height: 200px;
-  border-radius: 20%;
-  overflow: hidden;
-  border: 6px solid #061c52;
-  box-shadow: 0 8px 18px rgba(97, 152, 255, 0.4);
-  flex-shrink: 0;
-  transition: border-color 0.3s ease;
+    width: 200px;
+    height: 130px;               /* taller to show more image */
+    border-radius: 15px;         /* soft round corners, not a circle */
+    overflow: hidden;
+    border: 4px solid #007bff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
+
 
 .timeline-item:hover .timeline-img {
   border-color: #041237;
@@ -5015,11 +5014,11 @@ footer .copyright p {
 }
 
 .timeline-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
+
 
 .timeline-item:hover .timeline-img img {
   transform: scale(1.08);
