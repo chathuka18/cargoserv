@@ -4999,9 +4999,9 @@ footer .copyright p {
 }
 
 .timeline-img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 20%;
   overflow: hidden;
   border: 6px solid #061c52;
   box-shadow: 0 8px 18px rgba(97, 152, 255, 0.4);
