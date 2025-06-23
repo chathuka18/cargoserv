@@ -131,8 +131,32 @@
                         height: 50%;
                         object-fit: contain;
                       }
+                      #carousel * {
+    box-sizing: border-box !important;
+}
 
-                      .carousel-container {
+@media (min-width: 1024px) {
+    #carousel > div:nth-child(3n-2),
+    #carousel > div:nth-child(3n-1) {
+        margin-right: 2px !important;
+        width: calc(33.333% - 1.33px) !important;
+    }
+    
+    #carousel > div:nth-child(3n) {
+        margin-right: 0px !important;
+        width: 33.333% !important;
+    }
+    
+    #carousel > div {
+        flex: none !important;
+        padding: 0 !important;
+        margin-left: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+}
+
+                      /* .carousel-container {
     display: flex;
     justify-content: center;
     max-width: 100%;
@@ -141,14 +165,14 @@
 
 .carousel {
     display: flex;
-    gap: 10px; /* Space between posts on mobile */
+    gap: 10px; 
     transition: transform 0.5s ease-in-out;
 }
 
 .post {
-    width: 100%; /* Full width on mobile */
-    flex-shrink: 0; /* Prevent shrinking */
-    text-align: center; /* Center-align content */
+    width: 100%; 
+    flex-shrink: 0; 
+    text-align: center; 
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -156,7 +180,7 @@
 
 .post img {
     width: 100%;
-    height: 200px; /* Reduced height for better mobile view */
+    height: 200px; 
     object-fit: cover;
     border-radius: 8px;
 }
@@ -170,20 +194,20 @@
 .created-time {
     font-size: 12px;
     color: #888;
-}
+} */
 
 /* Media Queries for responsiveness on different devices */
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     .post {
-        width: 50%; /* Show two posts at a time on tablets */
+        width: 50%; 
     }
 }
 
 @media (min-width: 1024px) {
     .post {
-        width: 33.33%; /* Show three posts at a time on larger screens */
+        width: 33.33%; 
     }
-}
+} */
 
                     </style>
                   </head>
@@ -680,23 +704,22 @@
         <!-- End of 1.13. Questions section -->
 
         <!-- 1.14. News section -->
-        <section class="News bg-gray-100 py-10">
-            <div class="container mx-auto px-4">
-              <h4 class="text-2xl font-semibold text-gray-800 text-center mb-6">Latest News</h4>
-              <div class="relative overflow-hidden">
-                <div class="carousel-container flex items-center justify-center" style="height: 600px;"> <!-- Adjust container height -->
-                  <div class="carousel flex gap-4 transition-transform duration-500 ease-in-out" id="carousel" style="height: 600px;">
-                    <!-- Posts will be injected here -->
-                  </div>
-                </div>
-                <!-- Navigation Buttons -->
-                <div class="flex justify-between mt-4" style="max-width: 3400px; margin: auto;">
-                  <button id="prevBtn" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400 disabled:opacity-50" disabled>&lt;</button>
-                  <button id="nextBtn" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400">&gt;</button>
+        <section style="background-color: #f3f4f6; padding: 1.5rem 0.5rem;">
+            <h4 style="font-size: 1.5rem; font-weight: 600; color: #1f2937; text-align: center; margin-bottom: 1.5rem;">Latest News</h4>
+          
+            <div style="position: relative; overflow: hidden; width: 100%;">
+              <div id="carousel-container" style="width: 100%; overflow: hidden;">
+                <div id="carousel" style="display: flex; transition: transform 0.5s ease-in-out;">
+                  <!-- Facebook posts injected here -->
                 </div>
               </div>
+          
+              <div style="display: flex; justify-content: space-between; margin-top: 1rem; max-width: 320px; margin-left: auto; margin-right: auto;">
+                <button id="prevBtn" style="padding: 0.5rem 1rem; background-color: #d1d5db; color: #374151; border-radius: 0.5rem; cursor: pointer;" disabled>&lt;</button>
+                <button id="nextBtn" style="padding: 0.5rem 1rem; background-color: #d1d5db; color: #374151; border-radius: 0.5rem; cursor: pointer;">&gt;</button>
+              </div>
             </div>
-          </section>
+          </section>
         <!-- End of 1.14. News section -->
 
                 <!-- 1.15. Subscribe section -->
@@ -861,112 +884,185 @@
     <script src="assets/js/aos.js"></script>
 
 <script>
+    const pageId = "61569230769175";
     const accessToken = "EAAN8sJZAFLZAMBOZCYOKAFcnSaphYJ1DcX1b4uEu7qZBribia1dvMlycTZCyTMyAO4xLrRaCE897F5YnBcBhJ303fcxbJONZCXZC0GcrxOcqaJDd97vEzMz7tvdD3oD7bdc4pHvWZA0AXF4aZCyitdA9ooCcfuSAjDJ93nC2f1oLxd0MSwTSlVhf0tsO7FiWSfQMVQPNcRNWg";
     const url = "https://graph.facebook.com/v15.0/457763814094558/posts?fields=id,message,created_time,attachments{media}&access_token=" + accessToken;
-
-    let currentIndex = 0;
-    let postsPerView = 1;
-    let posts = [];
-
-    async function fetchPosts() {
-        try {
-            const response = await fetch(url);
-            if (!response.ok) throw new Error("Failed to fetch posts");
-
-            const data = await response.json();
-            posts = data.data.filter(post => {
-                if (post.attachments && post.attachments.data) {
-                    return post.attachments.data.some(attachment => attachment.media && attachment.media.image);
-                }
-                return false;
-            }).slice(0, 10);
-
-            const carousel = document.getElementById("carousel");
-            carousel.innerHTML = "";
-
-            posts.forEach(post => {
-                let imageSrc = "";
-                if (post.attachments && post.attachments.data) {
-                    for (const attachment of post.attachments.data) {
-                        if (attachment.media && attachment.media.image) {
-                            imageSrc = attachment.media.image.src;
-                            break;
-                        }
-                    }
-                }
-
-                if (imageSrc) {
-                    const postElement = document.createElement("div");
-                    postElement.className = "post w-full max-w-md mx-auto flex-shrink-0";
-                    postElement.innerHTML = `
-                        <img class="w-full h-64 object-cover rounded-lg shadow-md cursor-pointer" src="${imageSrc}" alt="Facebook post image">
-                    `;
-                    postElement.addEventListener("click", () => {
-                        window.open(`https://www.facebook.com/${post.id}`, "_blank");
-                    });
-                    carousel.appendChild(postElement);
-                }
-            });
-
-            setupCarousel(document.querySelectorAll("#carousel .post").length);
-        } catch (error) {
-            console.error("Error fetching posts:", error.message);
-        }
-    }
-
-    function setupCarousel(totalPosts) {
-        const carousel = document.getElementById("carousel");
-        const prevBtn = document.getElementById("prevBtn");
-        const nextBtn = document.getElementById("nextBtn");
-
-        function updateButtons() {
-            prevBtn.disabled = currentIndex === 0;
-            nextBtn.disabled = currentIndex >= totalPosts - postsPerView;
-        }
-
-        function moveCarousel() {
-            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-            updateButtons();
-        }
-
-        function autoMoveCarousel() {
-            setInterval(() => {
-                if (currentIndex < totalPosts - 1) {
-                    currentIndex++;
-                } else {
-                    currentIndex = 0;
-                }
-                moveCarousel();
-            }, 15000);
-        }
-
-        prevBtn.addEventListener("click", () => {
-            if (currentIndex > 0) {
-                currentIndex--;
-                moveCarousel();
-            }
-        });
-
-        nextBtn.addEventListener("click", () => {
-            if (currentIndex < totalPosts - 1) {
-                currentIndex++;
-                moveCarousel();
-            }
-        });
-
-        updateButtons();
-        autoMoveCarousel();
-    }
-
-    fetchPosts();
-</script>
     
-    <script>
-        AOS.init({
-            once: true,
-            duration: 1500,
+   
+  let posts = [];
+  let currentIndex = 0;
+  let postsPerView = 1;
+
+  async function fetchPosts() {
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+
+      posts = data.data.filter(post => {
+        const attachments = post.attachments?.data || [];
+        return attachments.some(att => {
+          if (att.media?.image?.src) return true;
+          if (att.subattachments?.data) {
+            return att.subattachments.data.some(subAtt => subAtt.media?.image?.src);
+          }
+          return false;
         });
-    </script>
+      }).slice(0, 10);
+
+      const carousel = document.getElementById("carousel");
+      carousel.innerHTML = "";
+
+      posts.forEach(post => {
+        let imageSrc = null;
+        for (const att of post.attachments.data) {
+          if (att.media?.image?.src) {
+            imageSrc = att.media.image.src;
+            break;
+          }
+          if (att.subattachments?.data) {
+            for (const subAtt of att.subattachments.data) {
+              if (subAtt.media?.image?.src) {
+                imageSrc = subAtt.media.image.src;
+                break;
+              }
+            }
+            if (imageSrc) break;
+          }
+        }
+
+        const slide = document.createElement("div");
+        slide.style.display = "flex";
+        slide.style.justifyContent = "center";
+        slide.style.boxSizing = "border-box";
+
+        slide.innerHTML = `
+          <div style="width: 100%; max-width: 400px; aspect-ratio: 1 / 1; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <img src="${imageSrc}" alt="Facebook post image"
+              style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;"
+              onerror="this.parentElement.style.display='none'">
+          </div>
+        `;
+
+        slide.onclick = () => {
+          window.open(`https://www.facebook.com/${post.id}`, "_blank");
+        };
+
+        carousel.appendChild(slide);
+      });
+
+      setPostsPerView();
+      updateSlideWidths();
+      setupCarousel();
+    } catch (err) {
+      console.error("Error fetching posts:", err);
+    }
+  }
+
+  function setPostsPerView() {
+    const width = window.innerWidth;
+    if (width >= 1024) postsPerView = 3;
+    else if (width >= 768) postsPerView = 2;
+    else postsPerView = 1;
+  }
+
+  function updateSlideWidths() {
+    const carousel = document.getElementById("carousel");
+    const slides = carousel.children;
+
+    // Completely reset carousel styles
+    carousel.style.cssText = `
+        display: flex !important;
+        transition: transform 0.5s ease-in-out !important;
+        gap: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    `;
+
+    for (let i = 0; i < slides.length; i++) {
+      const slide = slides[i];
+      
+      if (window.innerWidth >= 1024) {
+        // Large screens - 3 images with 2px gap
+        slide.style.cssText = `
+            display: flex !important;
+            justify-content: center !important;
+            box-sizing: border-box !important;
+            flex: none !important;
+            width: calc(33.333% - 1.33px) !important;
+            margin-right: ${i % 3 === 2 ? '0px' : '2px'} !important;
+            margin-left: 0 !important;
+            padding: 0 !important;
+        `;
+      } else if (window.innerWidth >= 768) {
+        // Medium screens - 2 images
+        slide.style.cssText = `
+            display: flex !important;
+            justify-content: center !important;
+            box-sizing: border-box !important;
+            flex: none !important;
+            width: calc(50% - 2px) !important;
+            margin-right: ${i % 2 === 1 ? '0px' : '4px'} !important;
+            margin-left: 0 !important;
+            padding: 0 !important;
+        `;
+      } else {
+        // Small screens - 1 image
+        slide.style.cssText = `
+            display: flex !important;
+            justify-content: center !important;
+            box-sizing: border-box !important;
+            flex: none !important;
+            width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        `;
+      }
+    }
+  }
+  function setupCarousel() {
+    const carousel = document.getElementById("carousel");
+    const total = posts.length;
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    function updateButtons() {
+      prevBtn.disabled = currentIndex === 0;
+      nextBtn.disabled = currentIndex >= total - postsPerView;
+    }
+
+    function move() {
+      const offset = currentIndex * (100 / postsPerView);
+      carousel.style.transform = `translateX(-${offset}%)`;
+      updateButtons();
+    }
+
+    prevBtn.onclick = () => {
+      if (currentIndex > 0) currentIndex--;
+      move();
+    };
+
+    nextBtn.onclick = () => {
+      if (currentIndex < total - postsPerView) currentIndex++;
+      move();
+    };
+
+    setInterval(() => {
+      if (currentIndex < total - postsPerView) currentIndex++;
+      else currentIndex = 0;
+      move();
+    }, 10000);
+
+    move();
+  }
+
+  window.addEventListener("resize", () => {
+    setPostsPerView();
+    updateSlideWidths();
+    setupCarousel();
+  });
+
+  fetchPosts();
+</script>
 
 </body>
 
