@@ -71,6 +71,10 @@
 /* 1.1. Header section */
 
 /* main navBar */
+* {
+    font-family: 'Gilory' !important;
+}
+
 .navbar {
     padding: 12px 0px;
 }
@@ -385,6 +389,7 @@ aside li {
     color: #FFF;
     width: 735px;
     margin-bottom: 10px;
+    font-family: 'Gilory';
 }
 
 .Hero h1 span {
