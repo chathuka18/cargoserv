@@ -1545,7 +1545,6 @@ aside li {
 .Quote label {
     margin-top: 16px;
     color: #3E3F41;
-    font-family: 'Gilroy';
     width: 100%;
     text-align: start;
 }
@@ -2608,7 +2607,6 @@ aside li {
     color: #3E3F41;
     font-weight: 500;
     font-size: 24px;
-    font-family: 'Gilroy';
 }
 
 .Questions .accordion-button:active,
@@ -4746,7 +4744,6 @@ footer .copyright p {
 }
 
 .Page-not-found .container span {
-    font-family: 'Gilroy';
     display: inline-block;
     font-size: 200px;
     opacity: 0;
@@ -4832,7 +4829,6 @@ footer .copyright p {
 .article-section {
     background-color: #fffffd; /* Light beach-inspired tone */
     padding: 60px 10px;
-    font-family: 'Gilroy';
     color: #333;
     text-align: left;
     max-width: 800px;  
@@ -5163,7 +5159,6 @@ section.Details .container {
             font-weight: 900;
             color: #003366;
             margin-bottom: 20px;
-            font-family: 'Gilroy';
             text-transform: uppercase;
             letter-spacing: 2px;
             text-shadow: 1px 1px 3px #b3d1ff;
@@ -5173,7 +5168,6 @@ section.Details .container {
             line-height: 1.6;
             color: #0a2540;
             font-weight: 500;
-            font-family: 'Gilroy';
         }
         /* Image container */
         section.Details .content-box .image {
@@ -5212,7 +5206,6 @@ section.Details .container {
 
         .freight-forwarding-section {
   padding: 80px 0;
-  font-family: 'Gilroy';
 }
 
 .freight-row {
@@ -5233,7 +5226,6 @@ section.Details .container {
 }
 
 .freight-text h2 {
-font-family: 'Gilroy';
   font-size: 36px;
   font-weight: 700;
   color: #002147;
@@ -5241,7 +5233,6 @@ font-family: 'Gilroy';
 }
 
 .freight-text p {
-    font-family: 'Gilroy';
   font-size: 18px;
   color: #444;
   line-height: 1.6;
@@ -5251,7 +5242,6 @@ font-family: 'Gilroy';
 .freight-text ul {
   list-style-type: square;
   padding-left: 20px;
-  font-family: 'Gilroy';
   font-size: 17px;
   color: #333;
 }
@@ -5285,7 +5275,6 @@ font-family: 'Gilroy';
   background: #e6f0ff; /* light blue background */
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(38, 70, 83, 0.15);
-  font-family: 'Gilroy';
   color: #1e3a8a; /* strong blue */
 }
 
@@ -5377,7 +5366,6 @@ font-family: 'Gilroy';
   text-align: center;
   box-shadow: 0 8px 20px rgba(38, 70, 83, 0.3);
   color: white;
-  font-family: 'Gilroy';
 }
 
 .video-banner.modern-blue-video h2 {
