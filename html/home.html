@@ -816,22 +816,68 @@
         <!-- End of 1.13. Questions section -->
 
        <!-- 1.14. News section -->
-        <section style="background-color: #f3f4f6; padding: 1.5rem 0.5rem;">
-            <h4 style="font-size: 1.5rem; font-weight: 600; color: #1f2937; text-align: center; margin-bottom: 1.5rem;">Latest News</h4>
-          
-            <div style="position: relative; overflow: hidden; width: 100%;">
-              <div id="carousel-container" style="width: 100%; overflow: hidden;">
-                <div id="carousel" style="display: flex; transition: transform 0.5s ease-in-out;">
-                  <!-- Facebook posts injected here -->
-                </div>
-              </div>
-          
-              <div style="display: flex; justify-content: space-between; margin-top: 1rem; max-width: 320px; margin-left: auto; margin-right: auto;">
-                <button id="prevBtn" style="padding: 0.5rem 1rem; background-color: #d1d5db; color: #374151; border-radius: 0.5rem; cursor: pointer;" disabled>&lt;</button>
-                <button id="nextBtn" style="padding: 0.5rem 1rem; background-color: #d1d5db; color: #374151; border-radius: 0.5rem; cursor: pointer;">&gt;</button>
-              </div>
-            </div>
-          </section>
+  <section style="background-color: #f3f4f6; padding: 1.5rem 0.5rem;">
+  <h4 style="font-size: 1.5rem; font-weight: 600; color: #1f2937; text-align: center; margin-bottom: 1.5rem;">Latest News</h4>
+
+  <div style="position: relative; overflow: hidden; width: 100%;">
+    <div id="carousel-container" style="width: 100%; overflow: hidden;">
+      <div id="carousel" style="display: flex; transition: transform 0.8s ease;">
+        <!-- Example slides (replace with Facebook posts) -->
+        <div style="min-width: 320px; margin: 0 10px; background: white; border-radius: 8px; padding: 1rem; text-align: center;">Post 1</div>
+        <div style="min-width: 320px; margin: 0 10px; background: white; border-radius: 8px; padding: 1rem; text-align: center;">Post 2</div>
+        <div style="min-width: 320px; margin: 0 10px; background: white; border-radius: 8px; padding: 1rem; text-align: center;">Post 3</div>
+      </div>
+    </div>
+
+    <div style="display: flex; justify-content: space-between; margin-top: 1rem; max-width: 320px; margin-left: auto; margin-right: auto;">
+      <button id="prevBtn" style="padding: 0.5rem 1rem; background-color: #d1d5db; color: #374151; border-radius: 0.5rem; cursor: pointer;" disabled>&lt;</button>
+      <button id="nextBtn" style="padding: 0.5rem 1rem; background-color: #d1d5db; color: #374151; border-radius: 0.5rem; cursor: pointer;">&gt;</button>
+    </div>
+  </div>
+</section>
+
+<script>
+  const carousel = document.getElementById('carousel');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  let index = 0;
+
+  function updateCarousel() {
+    const slides = carousel.children.length;
+    const slideWidth = carousel.children[0].offsetWidth + 20; // auto-detect width (+margin)
+
+    // Clamp index
+    if (index <= 0) {
+      index = 0;
+      prevBtn.disabled = true;
+    } else {
+      prevBtn.disabled = false;
+    }
+
+    if (index >= slides - 1) {
+      index = slides - 1;
+      nextBtn.disabled = true;
+    } else {
+      nextBtn.disabled = false;
+    }
+
+    carousel.style.transform = `translateX(-${index * slideWidth}px)`;
+  }
+
+  nextBtn.addEventListener('click', () => {
+    index++;
+    updateCarousel();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    index--;
+    updateCarousel();
+  });
+
+  // ✅ Initialize after DOM loaded
+  wind
+
         <!-- End of 1.14. News section -->
          <!-- hf -->
 
